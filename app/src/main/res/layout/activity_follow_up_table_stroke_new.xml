@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/window_top_size"
+            android:text="随访表-脑卒中"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+
+        <ImageView
+            android:id="@+id/save_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/save"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="症状体征"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/simple_gray_stroke"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/symptom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible">
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/symptom_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="5dp"
+                app:orientation="horizontal"
+                app:childGravity="center">
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/line_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_green"
+            android:layout_below="@id/symptom_layout"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:layout_marginRight="@dimen/simple_height15"/>
+        <TextView
+            android:id="@+id/new_type_stroke_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+            android:text="新发卒中类型"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_below="@+id/line_tv1"
+            android:layout_alignLeft="@+id/line_tv1"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/type_symptom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible"
+            android:layout_below="@+id/new_type_stroke_tv">
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/type_symptom_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="5dp"
+                app:orientation="horizontal"
+                app:childGravity="center">
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_green"
+            android:layout_below="@id/type_symptom_layout"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:layout_marginRight="@dimen/simple_height15"/>
+        <TextView
+            android:id="@+id/complication_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+            android:text="并发症"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_below="@+id/line_tv2"
+            android:layout_alignLeft="@+id/line_tv2"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/complication_symptom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible"
+            android:layout_below="@+id/complication_tv">
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/complication_symptom_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="5dp"
+                app:orientation="horizontal"
+                app:childGravity="center">
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+        </LinearLayout>
+        <View
+
+            android:id="@+id/line_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_green"
+            android:layout_below="@id/complication_symptom_layout"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:layout_marginRight="@dimen/simple_height15"/>
+        <TextView
+            android:id="@+id/stroke_part_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+            android:text="脑卒中部位"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_below="@+id/line_tv3"
+            android:layout_alignLeft="@+id/line_tv3"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/part_symptom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible"
+            android:layout_below="@+id/stroke_part_tv">
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/part_symptom_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="5dp"
+                app:orientation="horizontal"
+                app:childGravity="center">
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_tv4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_green"
+            android:layout_below="@+id/part_symptom_layout"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:layout_marginRight="@dimen/simple_height15"/>
+        <TextView
+            android:id="@+id/new_stroke_symptoms_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+            android:text="新卒中症状"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_below="@+id/line_tv4"
+            android:layout_alignLeft="@+id/line_tv4"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/new_stroke_symptom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible"
+            android:layout_below="@+id/new_stroke_symptoms_tv">
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/new_stroke_symptom_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="5dp"
+                app:orientation="horizontal"
+                app:childGravity="center">
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="生活方式指导"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/simple_gray_stroke">
+
+        <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+            android:id="@+id/daily_smoke_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="日吸烟量"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/daily_smoke_amount_et"
+            android:layout_width="@dimen/simple_height5"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/daily_smoke_amount_tv"
+            android:layout_alignTop="@+id/daily_smoke_amount_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/daily_smoke_amount_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="支"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/daily_smoke_amount_et"
+            android:layout_alignTop="@+id/daily_smoke_amount_tv"
+            android:layout_marginLeft="5dp"/>
+
+
+        <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+            android:id="@+id/daily_drinking_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="日饮酒量"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_toRightOf="@+id/daily_smoke_amount_unit_tv"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/daily_drinking_amount_et"
+            android:layout_width="@dimen/simple_height5"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/daily_drinking_amount_tv"
+            android:layout_alignTop="@+id/daily_drinking_amount_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/daily_drinking_amount_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="两"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/daily_drinking_amount_et"
+            android:layout_alignTop="@+id/daily_drinking_amount_tv"
+            android:layout_marginLeft="5dp"/>
+
+
+        <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+            android:id="@+id/sport_times_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="运动"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:layout_below="@+id/daily_smoke_amount_tv"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/sport_times_et"
+            android:layout_width="@dimen/simple_height4"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="number"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/sport_times_tv"
+            android:layout_alignTop="@+id/sport_times_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/sport_times_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="次/周"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/sport_times_et"
+            android:layout_alignTop="@+id/sport_times_tv"
+            android:layout_marginLeft="5dp"/>
+
+
+        <EditText
+            android:id="@+id/sport_min_et"
+            android:layout_width="@dimen/simple_height4"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/sport_times_unit_tv"
+            android:layout_alignTop="@+id/sport_times_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/sport_min_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="分钟/次"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/sport_min_et"
+            android:layout_alignTop="@+id/sport_times_tv"
+            android:layout_marginLeft="5dp"/>
+
+
+
+        <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+            android:id="@+id/food_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="主食"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/sport_min_unit_tv"
+            android:layout_alignTop="@+id/sport_min_unit_tv"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/food_amount_et"
+            android:layout_width="@dimen/simple_height5"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/food_amount_tv"
+            android:layout_alignTop="@+id/food_amount_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/food_amount_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="克/天"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/food_amount_et"
+            android:layout_alignTop="@+id/food_amount_tv"
+            android:layout_marginLeft="5dp"/>
+
+
+        <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+            android:id="@+id/salt_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="摄盐情况"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_below="@+id/sport_times_tv"
+            android:layout_alignLeft="@+id/sport_times_tv"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/salt_amount_et"
+            android:layout_width="@dimen/simple_height5"
+            android:layout_height="@dimen/simple_height4"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:background="@drawable/simple_gray_stroke"
+            android:layout_toRightOf="@+id/salt_amount_tv"
+            android:layout_alignTop="@+id/salt_amount_tv"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:selectAllOnFocus="true"/>
+
+        <TextView
+            android:id="@+id/salt_amount_unit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="克/天"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/salt_amount_et"
+            android:layout_alignTop="@+id/salt_amount_tv"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/psychological_recovery_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="心理调整"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/salt_amount_tv"/>
+
+        <Spinner
+            android:id="@+id/psychological_recovery_spinner"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="@dimen/register_edit_height"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@+id/psychological_recovery_tv"
+            android:layout_alignBottom="@+id/psychological_recovery_tv"
+
+            />
+        <ImageButton
+            android:id="@+id/psychological_recovery_spinner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_toRightOf="@+id/psychological_recovery_spinner"
+            android:layout_alignBottom="@+id/psychological_recovery_spinner"
+            android:layout_marginRight="@dimen/indicate_mini_size"
+            android:src="@drawable/arrow_down"
+            />
+
+
+
+        <TextView
+            android:id="@+id/following_doctor_instruction_behavior_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="遵医行为"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/psychological_recovery_tv"
+            android:layout_below="@+id/sport_times_tv"
+            android:layout_toRightOf="@+id/psychological_recovery_spinner_image"/>
+
+        <Spinner
+            android:id="@+id/following_doctor_instruction_behavior_spinner"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="@dimen/register_edit_height"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@+id/following_doctor_instruction_behavior_tv"
+            android:layout_alignBottom="@+id/following_doctor_instruction_behavior_tv"
+
+            />
+        <ImageButton
+            android:id="@+id/following_doctor_instruction_behavior_spinner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_toRightOf="@+id/following_doctor_instruction_behavior_spinner"
+            android:layout_alignBottom="@+id/following_doctor_instruction_behavior_spinner"
+            android:layout_marginRight="@dimen/indicate_mini_size"
+            android:src="@drawable/arrow_down"
+            />
+
+        <TextView
+            android:id="@+id/recovery_treatment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="康复治疗方式"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/psychological_recovery_tv"/>
+
+        <Spinner
+            android:id="@+id/recovery_treatment_spinner"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="@dimen/register_edit_height"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@+id/recovery_treatment_tv"
+            android:layout_alignBottom="@+id/recovery_treatment_tv"
+
+            />
+        <ImageButton
+            android:id="@+id/recovery_treatment_spinner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_toRightOf="@+id/recovery_treatment_spinner"
+            android:layout_alignBottom="@+id/recovery_treatment_spinner"
+            android:layout_marginRight="@dimen/indicate_mini_size"
+            android:src="@drawable/arrow_down"
+            />
+        <TextView
+            android:id="@+id/limb_recovery_case_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:text="肢体功能恢复情况"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/recovery_treatment_tv"/>
+
+        <Spinner
+            android:id="@+id/limb_recovery_case_spinner"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="@dimen/register_edit_height"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@+id/limb_recovery_case_tv"
+            android:layout_alignBottom="@+id/limb_recovery_case_tv"
+
+            />
+        <ImageButton
+            android:id="@+id/limb_recovery_case_spinner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_toRightOf="@+id/limb_recovery_case_spinner"
+            android:layout_alignBottom="@+id/limb_recovery_case_spinner"
+            android:layout_marginRight="@dimen/indicate_mini_size"
+            android:src="@drawable/arrow_down"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="辅助检查"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/simple_gray_stroke">
+
+
+       <LinearLayout
+           android:id="@+id/aux_add_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+       </LinearLayout>
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:textColor="@color/background_green"
+            android:text="+"
+            android:textSize="@dimen/arrow_txt_size"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/aux_add_layout"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/medicine_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:textColor="@color/white"
+                android:text="保存"
+                android:background="@drawable/simple_btn_selector"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

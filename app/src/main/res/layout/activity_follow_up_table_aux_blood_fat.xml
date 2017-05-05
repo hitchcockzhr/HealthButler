@@ -1,0 +1,453 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+    <View
+        android:id="@+id/line_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/blood_fat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="血脂全项"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_below="@+id/line_tv2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/blood_fat_delete_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line_tv2"
+        android:src="@drawable/aux_delete"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/blood_fat_tv"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:id="@+id/aux_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/blood_fat_tv">
+
+        <Button
+            android:id="@+id/personal_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="自测"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_green_stroke_shape"/>
+
+        <Button
+            android:id="@+id/healthy_keeper_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="管家"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tab_btn_pressed_shape"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/hospital_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="医院"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/btn_green_stroke_shape"/>
+    </LinearLayout>
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/hdl_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="高浓度脂蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/aux_type_layout"/>
+
+
+    <EditText
+        android:id="@+id/hdl_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="3.7"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/hdl_tv"
+        android:layout_alignTop="@+id/hdl_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/hdl_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="mmol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/aux_type_layout"
+        android:layout_toRightOf="@+id/hdl_et"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/hdl_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/hdl_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/hdl_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/hdl_level_tv"
+        android:layout_alignTop="@+id/hdl_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/hdl_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="@string/right_arrow"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/hdl_low_normal_tv"
+        android:layout_alignTop="@+id/hdl_tv" />
+
+
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ldl_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="低密度脂蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/hdl_tv"/>
+
+    <EditText
+        android:id="@+id/ldl_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ldl_tv"
+        android:layout_alignTop="@+id/ldl_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/ldl_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="mmol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/ldl_et"
+        android:layout_alignTop="@+id/ldl_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/ldl_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ldl_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/ldl_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="3.12"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ldl_level_tv"
+        android:layout_alignTop="@+id/ldl_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/ldl_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="@string/left_arrow"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ldl_high_normal_tv"
+        android:layout_alignTop="@+id/ldl_tv" />
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/tg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="甘油三脂"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ldl_tv"/>
+
+    <EditText
+        android:id="@+id/tg_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/tg_tv"
+        android:layout_alignTop="@+id/tg_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/tg_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="mmol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/tg_et"
+        android:layout_alignTop="@+id/tg_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/tg_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/tg_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/tg_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.7"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tg_level_tv"
+        android:layout_alignTop="@+id/tg_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/tg_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tg_high_normal_tv"
+        android:layout_alignTop="@+id/tg_tv" />
+
+
+    <TextView
+        android:id="@+id/tg_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0.56"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tg_normal_tv"
+        android:layout_alignTop="@+id/tg_tv"
+        />
+
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/cholesterol_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="胆固醇"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tg_tv"/>
+
+    <EditText
+        android:id="@+id/cholesterol_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/cholesterol_tv"
+        android:layout_alignTop="@+id/cholesterol_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/cholesterol_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="mmol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/cholesterol_et"
+        android:layout_alignTop="@+id/cholesterol_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/cholesterol_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/cholesterol_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/cholesterol_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="5.69"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/cholesterol_level_tv"
+        android:layout_alignTop="@+id/cholesterol_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/cholesterol_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/cholesterol_high_normal_tv"
+        android:layout_alignTop="@+id/cholesterol_tv" />
+
+
+    <TextView
+        android:id="@+id/cholesterol_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.8"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/cholesterol_normal_tv"
+        android:layout_alignTop="@+id/cholesterol_tv"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/date_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录日期："
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/cholesterol_tv"/>
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2016-11-16"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cholesterol_tv"
+        android:layout_toRightOf="@+id/date_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择日期"/>
+
+    <TextView
+        android:id="@+id/time_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录时间："
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cholesterol_tv"
+        android:layout_toRightOf="@+id/date_tv"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="15:20"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cholesterol_tv"
+        android:layout_toRightOf="@+id/time_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择时间" />
+</RelativeLayout>

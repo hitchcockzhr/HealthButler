@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 连框颜色值 -->
+<item>
+    <shape android:shape="oval"
+        android:useLevel="false">
+        <solid android:color="@color/background_green" />
+        <size android:width="@dimen/simple_height3"
+            android:height="@dimen/simple_height3" />
+    </shape>
+</item>
+    <!-- 主体背景颜色值 -->
+<item android:bottom="3dp" android:top="3dp" android:left="3dp" android:right="3dp">
+    <shape
+        android:shape="oval"
+        android:useLevel="false">
+        <solid android:color="@color/white" />
+
+    </shape>
+</item>
+</layer-list>

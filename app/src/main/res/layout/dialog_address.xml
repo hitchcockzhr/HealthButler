@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_weight"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_top_height"
+        android:textColor="#FFFFFF"
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_max_size"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="选择地区"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:orientation="horizontal" >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </kankan.wheel.widget.WheelView>
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </kankan.wheel.widget.WheelView>
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/id_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </kankan.wheel.widget.WheelView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="50dp"/>
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/schedule_set_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="重复药房"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/medicine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_min_size"
+                android:text="已经在当前列表中，是否再次添加？"
+                android:background="@color/white"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height35"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

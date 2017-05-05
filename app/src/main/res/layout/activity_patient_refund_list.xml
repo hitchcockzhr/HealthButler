@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/title_top_height"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/title_top_height"
+            android:layout_weight="1"
+            android:text="申请退药"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+
+            android:layout_marginRight="40dp"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（患） "
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/patient_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+
+
+            <TextView
+                android:id="@+id/patient_age_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/patient_age_sui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="岁"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+    <!-- 个人信息 -->
+
+
+    <ListView
+        android:id="@+id/patient_pay_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/simple_height3"
+        android:text="退款"
+        android:textSize="@dimen/txt_min_size"
+        android:background="@drawable/simple_btn_selector"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

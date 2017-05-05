@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="预约列表"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height5"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/keshi_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_white_stroke_selector">
+            <Spinner
+                android:id="@+id/keshi_spinner"
+                android:layout_width="@dimen/register_year_spinner_width"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_white_stroke_selector"
+            android:layout_marginLeft="5dp">
+            <Spinner
+                android:id="@+id/hospital_spinner"
+                android:layout_width="@dimen/register_year_spinner_width"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_white_stroke_selector"
+            android:layout_marginLeft="5dp">
+            <Spinner
+                android:id="@+id/diqu_spinner"
+                android:layout_width="@dimen/register_year_spinner_width"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/doctor_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/white"
+        android:layout_margin="20dp"
+        android:dividerHeight="5dp"
+        android:divider="@color/white"/>
+
+
+
+
+</LinearLayout>

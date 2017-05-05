@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:id="@+id/tab_layout"
+    android:background="@drawable/btn_green_stroke_shape"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    >
+
+            <TextView
+                android:id="@+id/tv_tab"
+                android:layout_width="80dp"
+                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/txt_mid_size"
+                android:textColor="@color/white"
+               />
+
+</LinearLayout>

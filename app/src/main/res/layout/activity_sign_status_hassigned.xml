@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="@dimen/tuikuan_circle_unchoosed_size"
+            android:layout_height="@dimen/tuikuan_circle_unchoosed_size"
+            android:background="@drawable/green_circle_shape"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请签约"
+            android:textSize="@dimen/txt_mini_size"
+            android:layout_marginTop="@dimen/tuikuan_margin"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginLeft="@dimen/tuikuan_margin"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_margin"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/yishengqueren_circle"
+            android:layout_width="@dimen/tuikuan_circle_unchoosed_size"
+            android:layout_height="@dimen/tuikuan_circle_unchoosed_size"
+            android:background="@drawable/green_circle_shape"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已付款"
+            android:textSize="@dimen/txt_mini_size"
+            android:layout_marginTop="@dimen/tuikuan_margin"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginLeft="@dimen/tuikuan_margin"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_small_circle_internal"/>
+    <TextView
+        android:layout_width="@dimen/tuikuan_small_circle_size"
+        android:layout_height="@dimen/tuikuan_small_circle_size"
+        android:background="@drawable/green_circle_shape"
+        android:layout_marginBottom="@dimen/tuikuan_internal"
+        android:layout_marginRight="@dimen/tuikuan_margin"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/yaofangqueren_circle"
+            android:layout_width="@dimen/tuikuan_circle_choosed_size"
+            android:layout_height="@dimen/tuikuan_circle_choosed_size"
+            android:background="@drawable/radio_choosed_btn"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已签约"
+            android:textSize="@dimen/txt_mini_size"
+            android:layout_marginTop="@dimen/tuikuan_margin"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

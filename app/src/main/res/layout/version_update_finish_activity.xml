@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/background_green">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/window_top_size">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咻医生"
+                android:textColor="@color/white"
+                android:textSize="@dimen/arrow_txt_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咻一下，就医就这么简单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginLeft="30dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/now_version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前版本："
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/now_version_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="6.2.1"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/now_version_right_arrow"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="@string/right_arrow"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_max_size"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/new_version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_top_height"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/new_version_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/new_version_size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           android:text="您的版本已经是最新版本"
+           android:gravity="center"
+           android:textColor="@color/deep_gray"
+           android:textSize="@dimen/txt_max_size"/>
+
+
+
+
+
+   </LinearLayout>
+
+
+
+</LinearLayout>

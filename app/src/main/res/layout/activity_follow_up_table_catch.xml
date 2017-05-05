@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:text="随访表"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="异常指标提醒"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/simple_gray_stroke"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/simple_height4"
+           android:orientation="horizontal"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text="项目名称"
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="2"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text="值"
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="1"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text="单位"
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="1.5"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text=""
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="0.5"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text="正常范围"
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="3"/>
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="@dimen/simple_height4"
+               android:text="操作"
+               android:textSize="@dimen/txt_min_size"
+               android:gravity="center"
+               android:layout_weight="1.5"/>
+
+       </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:text="基础指标"
+                android:textSize="@dimen/txt_min_size"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/red"/>
+       <ListView
+           android:id="@+id/basic_list"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:listSelector="@color/white"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginBottom="5dp">
+
+       </ListView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/red"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:text="检查名称"
+                android:textSize="@dimen/txt_min_size"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/red"/>
+            <ListView
+                android:id="@+id/jc_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp">
+
+            </ListView>
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:background="@color/background_green"
+        android:gravity="center">
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（患） "
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/patient_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+
+
+            <TextView
+                android:id="@+id/patient_age_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/patient_age_sui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="岁"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/patient_tel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18603087281"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/patient_mctype_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/white"
+        android:dividerHeight="5dp"
+        android:divider="@color/white"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

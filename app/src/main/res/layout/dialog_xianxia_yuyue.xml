@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_weight"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_top_height"
+        android:textColor="#FFFFFF"
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_max_size"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="线下预约"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是一个现场诊室，无法保证为您提供在线咨询服务，需要与医生面对面诊疗，您是否确定购买该服务?"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="50dp"/>
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

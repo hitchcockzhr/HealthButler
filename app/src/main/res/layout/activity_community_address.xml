@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="社区名称维护"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+
+            android:layout_marginRight="40dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在地区："
+            android:textSize="@dimen/txt_mid_size"/>
+        <LinearLayout
+            android:id="@+id/district_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="省、市、区"
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/right_arrow"
+                android:textSize="@dimen/txt_max_size"/>
+
+            </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址："
+            android:textSize="@dimen/txt_mid_size"/>
+        <EditText
+            android:id="@+id/community_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="小区"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@null"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:background="@drawable/simple_btn_selector"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,353 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="身高体重检查解读"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="介绍"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        通过测量身高、体重，并加以计算，可以判断人的生长发育和体形状况。下面这个是得到医学界认可的衡量身高体重状况的BMI公式，这是目前国际上常用的衡量人体胖瘦程度的标准之一。其计算公式是："
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        身体质量指数(BMI)=体重(公斤)÷身高(米)的平方"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        比如，一个人身高是1.70米，体重是60公斤，这个人的身体质量指数（BMI）是："
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        BMI=60÷（1.70*1.70）=20.7612"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        健康体重的BMI指数为18.5-24.9；"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        BMI在25-28之间属于体重超标；"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        超过28即为肥胖症，而低于18.5就是消瘦了；"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        最理想的体重指数是22。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        肥胖的主要原因是摄食过多，摄入量超过消耗量，过剩的营养物质转化为脂肪积存于体内所致。此外，遗传、生活方式、内分泌、运动、精神因素等，对肥胖也有影响。北京阜外医院的资料指出，体重指数每增加2，冠心病、脑出血、脑血栓形成的相对危险便分别增加14%、4%和6%。因此防治肥胖是十分重要的。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        消瘦主要是由于摄食不足或消耗增多两大因素所引起。摄食及消化障碍多见于食管、胃肠道、肝、胆、胰腺病变。严重的恶心、呕吐，可致摄食障碍；消化液或酶的生成减少往往影响消化与吸收。消耗增多常见于恶性肿瘤、活动性肺结核、代谢疾病和内分泌疾病。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        另外，腰围也是衡量健康状况的标准之一，男性腰围正常应在85cm以内，女性腰围正常应在80cm以内，若超过之，也算肥胖。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="解读"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:id="@+id/understanding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:text="身高体重"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        人体生长发育最快的三个阶段："
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_corner_shape"
+            android:layout_margin="5dp">
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height6"
+                android:text="第一阶段"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/normal_condition_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height6"
+                android:text="从出生到2岁，又叫快速生长期。出生后的头三个月是人体生长发育最快的时期。"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/tv1"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height6"
+                android:text="第二阶段"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/tv1"/>
+            <TextView
+                android:id="@+id/high_condition_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height6"
+                android:text="从2岁到青春期开始，也称稳定生长期。这个时期的生长速度相当稳定，每年长高4－5厘米。"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_alignLeft="@+id/normal_condition_tv"
+                android:layout_below="@+id/normal_condition_tv"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height120"
+                android:text="第三阶段"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/tv2"/>
+            <TextView
+                android:id="@+id/low_condition_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height120"
+                android:text="青春期，一般要持续4~5年。女孩的青春期蹿长大约在11岁左右，以每年5~7厘米的速成度生长。而男孩的青春期蹿长则大约在13岁左右，以每年7－9厘米的速度生长。以上三个阶段的身高增长受诸多因素影响，其中包括内分泌（生长激素、甲状腺素、性激素等）、营养、生活环境和方式及遗传因素等。"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_alignLeft="@+id/high_condition_tv"
+                android:layout_below="@+id/high_condition_tv"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="注意事项"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.供给充足的蛋白质。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蛋白质是青少年生长发育的最佳“建筑材料”，不仅要保证蛋白质的数量，还要讲究质量。动物性食品，如鱼、肉、蛋、奶类所含人体必需的氨基酸齐全，营养价值高，应保证供给和需要（但也不要过量）。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.供给丰富的钙质。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加适量钙质和鱼肝油，对增长身高也有好处。多到户外活动，多晒太阳，因阳光中的紫外线能使皮肤中的脱氢胆固醇转化成维生素D3，从而有助于钙的吸收。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.少吃糖。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="糖吃多了易影响的食欲，进食量减少，影响营养素的吸收。而且糖在体内代谢的中间产物丙酮酸和乳酸增多，需要碱性的钙来中和，钙的消耗量增加，必然影响骨骼的生长。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.准时吃早餐。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="早餐要吃饱吃好，因为如果不吃早餐，机体为了供给上课用脑及活动的能量消耗都得动用体内储备的蛋白质。长此下去，会因缺乏蛋白质而影响生长发育及身高。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

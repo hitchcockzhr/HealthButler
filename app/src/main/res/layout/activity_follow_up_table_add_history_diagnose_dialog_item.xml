@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/diseases_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="@dimen/padding_min_size"
+    android:gravity="center_vertical"
+    android:background="@color/light_gray">
+
+    <TextView
+        android:id="@+id/diseases_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="高血压"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/txt_min_size"/>
+
+    <Button
+        android:id="@+id/diseases_select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="选择"
+        android:focusable="false"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/diseases_select_check_btn"
+        android:layout_width="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:button="@null"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:background="@drawable/add_diagnosis_radiobtn_selector"/>
+
+</LinearLayout>

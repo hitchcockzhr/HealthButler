@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_top_height"
+        android:orientation="horizontal" 
+        android:background="@color/background_green">
+        <Button 
+        android:id="@+id/back_btn"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/left_arrow"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/arrow_txt_size"
+        
+        />
+
+
+     <TextView
+        android:id="@+id/hospital_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX医院  "
+        android:textSize="@dimen/txt_max_size"
+        android:layout_gravity="center_vertical"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/head_imageview"
+        android:gravity="center_vertical"/>
+   
+
+     
+ </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.housekeeper.ar.healthhousekeeper.RoundImageView
+            android:id="@+id/head_imageview"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/header_photo" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/head_imageview"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/head_imageview"
+            android:layout_marginTop="20dp"
+            android:text="张三"
+            android:textSize="@dimen/txt_max_size"/>
+
+        <TextView
+            android:id="@+id/zhicheng_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/name_tv"
+            android:layout_alignBaseline="@+id/name_tv"
+            android:layout_marginLeft="16dp"
+            android:text="主任医师"
+            android:textSize="@dimen/txt_mid_size"/>
+
+        <TextView
+            android:id="@+id/keshi_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_tv"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/head_imageview"
+            android:textSize="@dimen/txt_mid_size"
+            android:text="XXX科" 
+            
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/zhuanchang_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/keshi_tv"
+            android:layout_toRightOf="@+id/head_imageview"
+            android:layout_alignLeft="@+id/keshi_tv"
+            android:singleLine="false"
+            android:text="专长：XXXXXXXXX" 
+            android:textSize="@dimen/txt_mid_size"/>
+
+    </RelativeLayout>
+
+    <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="40dp" 
+	    android:gravity="center_vertical|center_horizontal"
+	    android:layout_gravity="center_vertical|center_horizontal">
+		<TextView
+	        android:id="@+id/blank_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="   " />
+	    <TextView
+	        android:id="@+id/date_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:text="2014-12-12"
+	        android:textSize="@dimen/txt_mid_size" />
+		<TextView
+	        
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="   " />
+		<TextView
+	        android:id="@+id/week_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:text="星期二" 
+	        android:textSize="@dimen/txt_mid_size"/>
+		<TextView
+	        
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="   " />
+	    <TextView
+	        android:id="@+id/time_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:text="09:00-11:00" 
+	        android:textSize="@dimen/txt_mid_size"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="   " />
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="10元"
+            android:textSize="@dimen/txt_mid_size"/>
+
+	</LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+	    android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="20sp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="病情描述"
+            android:textSize="@dimen/txt_mid_size"/>
+
+        <EditText
+            android:id="@+id/description_et"
+            android:layout_width="286dp"
+            android:layout_height="200dp"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/btn_green_stroke_shape">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center_vertical|center_horizontal|bottom"
+	    android:layout_gravity="center_vertical|center_horizontal|bottom"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="#FFFFFF"
+            android:text="确认订单"
+            android:textSize="@dimen/txt_mid_size"
+            android:visibility="gone"
+            />
+        <View 
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/fukuan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="#FFFFFF"
+            android:text="立即付款"
+            android:textSize="@dimen/txt_mid_size"
+            />
+        <View 
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="#FFFFFF"
+            android:text="取消订单"
+            android:textSize="@dimen/txt_mid_size" />
+    </LinearLayout>
+
+</LinearLayout>

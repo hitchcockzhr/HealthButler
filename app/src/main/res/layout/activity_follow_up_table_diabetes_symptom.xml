@@ -1,0 +1,406 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/more_drink_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="多饮"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"/>
+    <CheckBox
+        android:id="@+id/more_drink_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/more_drink_tv"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+
+    <TextView
+        android:id="@+id/more_eat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="多食"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/more_drink_check_btn"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+    <CheckBox
+        android:id="@+id/more_eat_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/more_eat_tv"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+    <TextView
+        android:id="@+id/diuresis_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="多尿"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/more_eat_check_btn"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+    <CheckBox
+        android:id="@+id/diuresis_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/diuresis_tv"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+    <TextView
+        android:id="@+id/infection_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="感染"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/diuresis_check_btn"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+    <CheckBox
+        android:id="@+id/infection_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/infection_tv"
+        android:layout_alignTop="@+id/more_drink_tv"/>
+
+    <TextView
+        android:id="@+id/blurred_vision_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="视力模糊"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_below="@+id/more_drink_tv"
+        android:layout_alignLeft="@+id/more_drink_tv"
+        android:layout_marginTop="10dp"/>
+    <CheckBox
+        android:id="@+id/blurred_vision_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/blurred_vision_tv"
+        android:layout_alignTop="@+id/blurred_vision_tv"/>
+
+
+    <TextView
+        android:id="@+id/hands_feet_numbness_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="手脚麻木"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_below="@+id/more_drink_tv"
+        android:layout_toRightOf="@+id/blurred_vision_check_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+    <CheckBox
+        android:id="@+id/hands_feet_numbness_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/hands_feet_numbness_tv"
+        android:layout_alignTop="@+id/hands_feet_numbness_tv"/>
+
+
+    <TextView
+        android:id="@+id/legs_edema_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="下肢浮肿"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_below="@+id/more_drink_tv"
+        android:layout_toRightOf="@+id/hands_feet_numbness_check_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+    <CheckBox
+        android:id="@+id/legs_edema_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/legs_edema_tv"
+        android:layout_alignTop="@+id/legs_edema_tv"/>
+
+
+    <TextView
+        android:id="@+id/weight_decreased_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:text="体重明显下降"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"
+        android:layout_below="@+id/blurred_vision_tv"
+        android:layout_alignLeft="@+id/blurred_vision_tv"
+        android:layout_marginTop="10dp" />
+    <CheckBox
+        android:id="@+id/weight_decreased_check_btn"
+        android:layout_width="@dimen/simple_height25"
+        android:layout_height="@dimen/add_diagnosis_inner_radiobtn_size"
+        android:layout_gravity="top"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/weight_decreased_tv"
+        android:layout_alignTop="@+id/weight_decreased_tv"/>
+
+    <View
+        android:id="@+id/line_tv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background_green"
+        android:layout_below="@id/weight_decreased_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/water_intake_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="饮水量"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line_tv"/>
+
+    <EditText
+        android:id="@+id/water_intake_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/water_intake_tv"
+        android:layout_alignTop="@+id/water_intake_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/water_intake_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="L/d"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/water_intake_et"
+        android:layout_alignTop="@+id/water_intake_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/water_intake_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/water_intake_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/water_intake_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/water_intake_level_tv"
+        android:layout_alignTop="@+id/water_intake_tv"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/water_intake_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/water_intake_high_normal_tv"
+        android:layout_alignTop="@+id/water_intake_tv" />
+
+
+    <TextView
+        android:id="@+id/water_intake_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/water_intake_normal_tv"
+        android:layout_alignTop="@+id/water_intake_tv"
+        />
+    <TextView
+        android:id="@+id/water_intake_level_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="范围依据年龄、性别"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/water_intake_level_tv"
+        android:layout_alignTop="@+id/water_intake_tv"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"/>
+
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/urine_volume_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿量"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/water_intake_tv"/>
+
+    <EditText
+        android:id="@+id/urine_volume_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/urine_volume_tv"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/urine_volume_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="L/d"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/urine_volume_et"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/urine_volume_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/urine_volume_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_volume_level_tv"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/urine_volume_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_volume_high_normal_tv"
+        android:layout_alignTop="@+id/urine_volume_tv" />
+
+
+    <TextView
+        android:id="@+id/urine_volume_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0.4"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_volume_normal_tv"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        />
+
+    <TextView
+        android:id="@+id/urine_volume_level_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="范围依据年龄、性别"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_volume_level_tv"
+        android:layout_alignTop="@+id/urine_volume_tv"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/dorsalis_pedis_artery_pulse_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="足背动脉搏动"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/urine_volume_tv"/>
+
+    <Spinner
+        android:id="@+id/dorsalis_pedis_artery_pulse_spinner"
+        android:layout_width="@dimen/register_edit_width_name"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/dorsalis_pedis_artery_pulse_tv"
+        android:layout_alignBottom="@+id/dorsalis_pedis_artery_pulse_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/dorsalis_pedis_artery_pulse_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/dorsalis_pedis_artery_pulse_spinner"
+        android:layout_alignBottom="@+id/dorsalis_pedis_artery_pulse_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+
+
+</RelativeLayout>

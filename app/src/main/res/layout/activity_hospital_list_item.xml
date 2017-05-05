@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/drugs_tv"
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"/>
+    <TextView
+        android:id="@+id/diff_drugs_tv"
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"/>
+
+    <TextView
+        android:id="@+id/hospital_tv"
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height35"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/hospital_address_tv"
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height35"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:gravity="right|center_vertical">
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height3"
+            android:text="确定"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height3"
+            android:text="取消"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

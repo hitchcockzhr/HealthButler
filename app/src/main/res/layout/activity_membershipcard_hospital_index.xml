@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="患者选择"
+        android:gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/init_patient_layout"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_left_corner_shape"
+            >
+            <com.housekeeper.ar.healthhousekeeper.RoundImageView
+                android:id="@+id/patient_header_image1"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="@dimen/simple_height6"
+                android:src="@drawable/header_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="请选择患者"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="@dimen/simple_height6"
+                android:layout_toRightOf="@+id/patient_header_image1"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/patient_layout"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_left_corner_shape"
+            android:visibility="gone">
+            <com.housekeeper.ar.healthhousekeeper.RoundImageView
+                android:id="@+id/patient_header_image"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="@dimen/simple_height6"
+                android:src="@drawable/header_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_header_image"
+                android:text="张良"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/patient_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_name_tv"
+                android:layout_alignBottom="@+id/patient_name_tv"
+                android:text="男"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/patient_age_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_sex_tv"
+                android:layout_alignBottom="@+id/patient_name_tv"
+                android:text="53"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/patient_tel_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_header_image"
+                android:layout_below="@+id/patient_name_tv"
+                android:text="手机："
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/patient_tel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_tel_tv1"
+                android:layout_alignBottom="@+id/patient_tel_tv1"
+                android:text="13821435642"
+                android:textSize="@dimen/txt_min_size"
+                />
+
+
+            <TextView
+                android:id="@+id/patient_binganhao_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_header_image"
+                android:layout_below="@+id/patient_tel_tv1"
+                android:text="病案号："
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/patient_binghao_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_binganhao_tv1"
+                android:layout_alignBottom="@+id/patient_binganhao_tv1"
+                android:text="0013516899"
+                android:textSize="@dimen/txt_min_size"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/gray_right_corner_shape"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/patient_add_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="@dimen/arrow_txt_size"
+                android:textColor="@color/background_green"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="医院选择"
+        android:gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/hospital_init_layout"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_left_corner_shape"
+            >
+            <com.housekeeper.ar.healthhousekeeper.RoundImageView
+                android:id="@+id/header_image1"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="@dimen/simple_height6"
+                android:src="@drawable/header_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="请选择医院"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="@dimen/simple_height6"
+                android:layout_toRightOf="@+id/header_image1"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/gray_right_corner_shape"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/hospital_add_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="@dimen/arrow_txt_size"
+                android:textColor="@color/background_green"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:gravity="right|center_vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height3"
+            android:text="确定"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height3"
+            android:text="取消"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+        </LinearLayout>
+</LinearLayout>

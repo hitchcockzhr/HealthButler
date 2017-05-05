@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/hospital_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="XX社区卫生院"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/window_top_size"
+       android:orientation="horizontal"
+       android:layout_marginTop="10dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:text="卡名称"
+           android:textSize="@dimen/txt_mid_size"
+           android:gravity="center_vertical"
+           android:layout_marginLeft="10dp"/>
+       <EditText
+           android:id="@+id/mc_name_et"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:text=""
+           android:hint="单行输入"
+           android:singleLine="true"
+           android:textSize="@dimen/txt_mid_size"
+           android:gravity="center_vertical"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="50dp"
+           android:background="@drawable/simple_gray_stroke"/>
+
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height9"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="规则"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:id="@+id/mc_rule_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:hint="多行输入"
+            android:singleLine="false"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/simple_gray_stroke"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height6"
+        android:gravity="right|center_vertical">
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/arrow_txt_size"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/simple_gray_stroke"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="折扣率"
+            android:background="@drawable/simple_gray_stroke"
+            android:padding="3dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  =  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值额"
+            android:background="@drawable/simple_gray_stroke"
+            android:padding="3dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" /(" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赠送额"
+            android:background="@drawable/simple_gray_stroke"
+            android:padding="3dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" + 充值额)" />
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="X"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="%"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height35"
+            android:textSize="@dimen/txt_mid_size"
+            android:text="确认"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

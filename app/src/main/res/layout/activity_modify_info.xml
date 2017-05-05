@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:id="@+id/background_layout"
+	android:background="@color/white"
+	android:clipToPadding="true"
+
+	android:fitsSystemWindows="true">
+
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/window_top_size"
+	android:orientation="horizontal"
+	android:background="@color/background_green"
+	>
+	<Button
+		android:id="@+id/back_btn"
+		android:layout_width="40dp"
+		android:layout_height="match_parent"
+		android:text="@string/left_arrow"
+		android:gravity="center"
+		android:textSize="@dimen/arrow_txt_size"
+		android:textColor="@color/white"
+		android:background="@color/background_green"/>
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/window_top_size"
+		android:background="@color/background_green"
+		android:textColor="@color/white"
+		android:textSize="@dimen/txt_max_size"
+		android:gravity="center"
+		android:text="用 户 注 册"
+		android:layout_marginRight="40dp"
+
+		/>
+</LinearLayout>
+
+
+
+	<RelativeLayout
+		android:id="@+id/first_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="visible">
+		<TextView
+			android:id="@+id/username_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginLeft="@dimen/register_margin"
+			android:text="账户："
+
+			android:layout_marginTop="@dimen/indicate_max_size"
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<EditText
+			android:id="@+id/username_et"
+			android:layout_width="@dimen/register_edit_width_name"
+			android:layout_height="@dimen/register_edit_height"
+
+			android:layout_marginRight="20dp"
+			android:layout_toRightOf="@+id/username_tv"
+			android:layout_alignBottom="@+id/username_tv"
+
+			android:textSize="@dimen/txt_mid_size"
+			android:background="@drawable/buttonstyle"
+			/>
+
+
+
+
+
+		<TextView
+			android:id="@+id/name_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:layout_below="@+id/username_tv"
+			android:layout_alignRight="@+id/username_tv"
+			android:text="姓名："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<EditText
+			android:id="@+id/name_et"
+			android:layout_width="@dimen/register_edit_width_xingming"
+			android:layout_height="@dimen/register_edit_height"
+
+
+			android:layout_toRightOf="@+id/name_tv"
+			android:layout_alignBottom="@+id/name_tv"
+			android:textSize="@dimen/txt_mid_size"
+			android:background="@drawable/buttonstyle"/>
+
+		<TextView
+			android:id="@+id/sex_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+
+			android:layout_toRightOf="@+id/name_et"
+			android:layout_alignBottom="@+id/name_tv"
+			android:text="性别："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"
+			/>
+
+		<Spinner
+			android:id="@+id/sex_spinner"
+			android:layout_width="@dimen/register_edit_width_xingming"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_toRightOf="@+id/sex_tv"
+			android:layout_alignBottom="@+id/sex_tv"
+			android:background="@drawable/buttonstyle"
+
+			/>
+		<ImageButton
+			android:id="@+id/sex_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/sex_spinner"
+			android:layout_alignBottom="@+id/sex_spinner"
+
+			android:src="@drawable/arrow_down"/>
+
+
+		<TextView
+			android:id="@+id/birth_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:text="生日："
+			android:layout_below="@+id/name_tv"
+			android:layout_alignRight="@+id/name_tv"
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<Spinner
+			android:id="@+id/yearspinner"
+			android:layout_width="@dimen/register_year_spinner_width"
+			android:layout_height="@dimen/register_edit_height"
+
+			android:background="@drawable/buttonstyle"
+			android:layout_toRightOf="@+id/birth_tv"
+			android:layout_alignBottom="@+id/birth_tv"
+			/>
+		<ImageButton
+			android:id="@+id/year_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/yearspinner"
+			android:layout_alignBottom="@+id/yearspinner"
+			android:layout_marginRight="@dimen/indicate_mini_size"
+			android:src="@drawable/arrow_down"/>
+		<Spinner
+			android:id="@+id/monthspinner"
+			android:layout_width="@dimen/register_year_spinner_width"
+			android:layout_height="@dimen/register_edit_height"
+			android:background="@drawable/buttonstyle"
+
+
+			android:layout_toRightOf="@+id/year_spinner_image"
+			android:layout_alignBottom="@+id/birth_tv"
+			/>
+		<ImageButton
+			android:id="@+id/month_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/monthspinner"
+			android:layout_alignBottom="@+id/monthspinner"
+			android:layout_marginRight="@dimen/indicate_mini_size"
+			android:src="@drawable/arrow_down"/>
+		<Spinner
+			android:id="@+id/dayspinner"
+			android:layout_width="@dimen/register_month_spinner_width"
+			android:layout_height="@dimen/register_edit_height"
+			android:background="@drawable/buttonstyle"
+
+			android:layout_toRightOf="@+id/month_spinner_image"
+			android:layout_alignBottom="@+id/birth_tv"
+
+			/>
+		<ImageButton
+			android:id="@+id/day_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/dayspinner"
+			android:layout_alignBottom="@+id/dayspinner"
+			android:layout_alignRight="@+id/sex_spinner_image"
+			android:src="@drawable/arrow_down"/>
+
+		<TextView
+			android:id="@+id/work_id_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:layout_below="@+id/birth_tv"
+			android:layout_alignRight="@+id/birth_tv"
+			android:text="工号："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<EditText
+			android:id="@+id/work_id_et"
+			android:layout_width="wrap_content"
+
+			android:layout_height="@dimen/register_edit_height"
+
+			android:layout_toRightOf="@+id/work_id_tv"
+			android:layout_alignBottom="@+id/work_id_tv"
+			android:layout_alignRight="@+id/day_spinner_image"
+			android:ems="18"
+			android:textSize="@dimen/txt_mid_size"
+			android:background="@drawable/buttonstyle"
+
+			/>
+
+		<TextView
+			android:id="@+id/id_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:layout_below="@+id/work_id_tv"
+			android:layout_alignRight="@+id/work_id_tv"
+			android:text="身份证："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<EditText
+			android:id="@+id/id_et"
+			android:layout_width="wrap_content"
+
+			android:layout_height="@dimen/register_edit_height"
+
+			android:layout_toRightOf="@+id/id_tv"
+			android:layout_alignBottom="@+id/id_tv"
+			android:layout_alignRight="@+id/day_spinner_image"
+			android:ems="18"
+			android:textSize="@dimen/txt_mid_size"
+			android:background="@drawable/buttonstyle"
+
+			/>
+
+		<TextView
+			android:id="@+id/mail_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:layout_below="@+id/id_tv"
+			android:layout_alignRight="@+id/id_tv"
+			android:text="电邮："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+
+		<EditText
+			android:id="@+id/mail_et"
+			android:layout_width="wrap_content"
+
+			android:layout_height="@dimen/register_edit_height"
+			android:textSize="@dimen/txt_mid_size"
+
+			android:layout_toRightOf="@+id/mail_tv"
+			android:layout_alignBottom="@+id/mail_tv"
+			android:layout_alignRight="@+id/id_et"
+
+			android:ems="10"
+			android:inputType="textEmailAddress"
+			android:background="@drawable/buttonstyle"/>
+
+
+		<TextView
+			android:id="@+id/tel_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:layout_marginTop="@dimen/indicate_mini_size"
+
+			android:layout_below="@+id/mail_tv"
+			android:layout_alignRight="@+id/mail_tv"
+			android:text="手机号："
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"/>
+		<EditText
+			android:id="@+id/tel_et"
+			android:layout_width="wrap_content"
+
+			android:layout_height="@dimen/register_edit_height"
+
+
+			android:layout_toRightOf="@+id/tel_tv"
+			android:layout_alignBottom="@+id/tel_tv"
+			android:layout_alignRight="@+id/mail_et"
+			android:inputType="phone"
+			android:ems="10"
+			android:textSize="@dimen/txt_mid_size"
+			android:background="@drawable/buttonstyle"
+			/>
+
+
+
+		<TextView
+			android:id="@+id/yy_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+
+			android:text="所在医院："
+
+
+			android:layout_marginTop="@dimen/indicate_mini_size"
+			android:textSize="@dimen/txt_mid_size"
+			android:paddingTop="@dimen/register_edit_padding"
+			android:layout_below="@+id/tel_tv"
+			android:layout_alignRight="@+id/tel_tv"/>
+
+		<Spinner
+			android:id="@+id/sheng_spinner"
+			android:layout_width="@dimen/register_year_spinner_width"
+			android:layout_height="@dimen/register_edit_height"
+
+			android:background="@drawable/buttonstyle"
+			android:layout_toRightOf="@+id/yy_tv"
+			android:layout_alignBottom="@+id/yy_tv"
+			/>
+		<ImageButton
+			android:id="@+id/sheng_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/sheng_spinner"
+			android:layout_alignBottom="@+id/sheng_spinner"
+			android:layout_marginRight="@dimen/indicate_mini_size"
+			android:src="@drawable/arrow_down"/>
+		<Spinner
+			android:id="@+id/shi_spinner"
+			android:layout_width="@dimen/register_year_spinner_width"
+			android:layout_height="@dimen/register_edit_height"
+			android:background="@drawable/buttonstyle"
+
+
+			android:layout_toRightOf="@+id/sheng_spinner_image"
+			android:layout_alignBottom="@+id/yy_tv"
+			/>
+		<ImageButton
+			android:id="@+id/shi_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/shi_spinner"
+			android:layout_alignBottom="@+id/shi_spinner"
+			android:layout_marginRight="@dimen/indicate_mini_size"
+			android:src="@drawable/arrow_down"/>
+		<Spinner
+			android:id="@+id/yy_spinner"
+			android:layout_width="@dimen/simple_height8"
+			android:layout_height="@dimen/register_edit_height"
+			android:background="@drawable/buttonstyle"
+
+			android:layout_toRightOf="@+id/shi_spinner_image"
+			android:layout_alignBottom="@+id/yy_tv"
+
+			/>
+		<ImageButton
+			android:id="@+id/yy_spinner_image"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:scaleType="centerInside"
+			android:background="@color/background_green"
+			android:layout_toRightOf="@+id/yy_spinner"
+			android:layout_alignBottom="@+id/yy_spinner"
+
+			android:src="@drawable/arrow_down"/>
+
+
+
+		<ImageView
+			android:id="@+id/photo_image"
+			android:layout_width="@dimen/simple_height8"
+			android:layout_height="@dimen/simple_height8"
+			android:layout_marginTop="@dimen/indicate_mid_size"
+			android:src="@drawable/header_photo"
+			android:layout_below="@+id/yy_tv"
+			android:layout_alignLeft="@+id/yy_tv"
+			android:background="@drawable/buttonstyle"
+			android:layout_marginLeft="30dp"/>
+		<Button
+			android:id="@+id/photoBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:text="设置头像"
+			android:layout_toRightOf="@+id/photo_image"
+			android:layout_below="@+id/yy_tv"
+			android:background="@drawable/simple_btn_selector"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/txt_mid_size" />
+
+		<Button
+			android:id="@+id/sign_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/register_edit_height"
+			android:text="设置签名"
+			android:background="@drawable/simple_btn_selector"
+			android:layout_below="@+id/photoBtn"
+			android:layout_alignLeft="@+id/photoBtn"
+			android:layout_alignRight="@+id/photoBtn"
+			android:layout_marginTop="@dimen/indicate_mid_size"
+			android:textColor="@color/white"
+			android:textSize="@dimen/txt_mid_size" />
+
+
+
+		<Button
+			android:id="@+id/regbtn"
+			android:layout_width="@dimen/login_btn_width"
+			android:layout_height="@dimen/login_btn_height"
+			android:text="完成注册"
+			android:background="@drawable/simple_btn_selector"
+			android:layout_marginTop="20dp"
+			android:textColor="@color/white"
+			android:layout_below="@+id/sign_btn"
+			android:layout_centerInParent="true"
+
+			android:textSize="@dimen/txt_mid_size" />
+
+	</RelativeLayout>
+
+
+</LinearLayout>

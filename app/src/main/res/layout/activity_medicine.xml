@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/window_top_size"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:text="当前处方"
+            android:gravity="center"
+            android:textSize="@dimen/txt_max_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+            android:layout_marginRight="40dp"/>
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        />
+
+    <LinearLayout
+        android:id="@+id/current_medicine_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_gravity="center"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/medicine_title_1"
+            layout="@layout/prescription_title_1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Grey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        <ListView
+            android:id="@+id/current_medicine_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:listSelector="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Grey"
+            android:layout_margin="5dp"
+           />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height35"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/current_medicine_delete_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/current_medicine_search_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Grey"
+            android:layout_margin="5dp"
+            />
+        
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/prescription_tv"
+
+            android:background="@drawable/btn_green_stroke_selector"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/txt_min_size"
+
+            android:text="处方"/>
+
+        <TextView
+            android:id="@+id/clear_tv"
+
+            android:background="@drawable/btn_green_stroke_selector"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/txt_min_size"
+
+            android:text="清空"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

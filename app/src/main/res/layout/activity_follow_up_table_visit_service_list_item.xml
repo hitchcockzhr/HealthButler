@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/simple_height6"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@drawable/simple_gray_stroke"
+    android:layout_marginBottom="5dp"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="@dimen/simple_height6"
+        android:layout_height="@dimen/simple_height4"
+        android:src="@drawable/header_photo"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/simple_height120"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/service_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打针"
+            android:textSize="@dimen/txt_mid_size"
+            />
+
+        <TextView
+            android:id="@+id/service_detail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="肌肉注射，皮下注射"
+            android:textSize="@dimen/txt_min_size"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/service_total_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123次"
+        android:textSize="@dimen/txt_mid_size"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/service_add_count_tv"
+            android:layout_width="@dimen/simple_height20"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/service_count_et"
+            android:layout_width="@dimen/simple_height4"
+            android:layout_height="match_parent"
+            android:text="123"
+            android:inputType="number"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_gray_stroke"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/service_sub_count_tv"
+            android:layout_width="@dimen/simple_height20"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

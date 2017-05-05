@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+    <View
+        android:id="@+id/line_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/urine_routine_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿常规"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_below="@+id/line_tv2"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/urine_delete_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line_tv2"
+        android:src="@drawable/aux_delete"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/urine_routine_tv"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:id="@+id/aux_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/urine_routine_tv">
+
+        <Button
+            android:id="@+id/personal_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="自测"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_green_stroke_shape"/>
+
+        <Button
+            android:id="@+id/healthy_keeper_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="管家"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tab_btn_pressed_shape"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/hospital_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="医院"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/btn_green_stroke_shape"/>
+    </LinearLayout>
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ph_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="酸碱度"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/aux_type_layout"/>
+
+    <EditText
+        android:id="@+id/ph_value_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ph_value_tv"
+        android:layout_alignTop="@+id/ph_value_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+
+    <TextView
+        android:id="@+id/ph_value_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ph_value_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/ph_value_average_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="(平均值6.0)"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ph_value_level_tv"
+        android:layout_alignTop="@+id/ph_value_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+    <TextView
+        android:id="@+id/ph_value_high_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="8.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ph_value_average_tv"
+        android:layout_alignTop="@+id/ph_value_tv"
+        />
+
+    <TextView
+        android:id="@+id/ph_value_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ph_value_high_tv"
+        android:layout_alignTop="@+id/ph_value_tv"
+        />
+
+    <TextView
+        android:id="@+id/ph_value_low_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="4.6"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ph_value_normal_tv"
+        android:layout_alignTop="@+id/ph_value_tv"
+        />
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/urine_specific_gravity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿比重"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ph_value_tv"/>
+
+    <EditText
+        android:id="@+id/urine_specific_gravity_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/urine_specific_gravity_tv"
+        android:layout_alignTop="@+id/urine_specific_gravity_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+
+    <TextView
+        android:id="@+id/urine_specific_gravity_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/urine_specific_gravity_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/urine_specific_gravity_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.025"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_specific_gravity_level_tv"
+        android:layout_alignTop="@+id/urine_specific_gravity_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/urine_specific_gravity_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_specific_gravity_high_normal_tv"
+        android:layout_alignTop="@+id/urine_specific_gravity_tv" />
+
+
+    <TextView
+        android:id="@+id/urine_specific_gravity_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.015"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/urine_specific_gravity_normal_tv"
+        android:layout_alignTop="@+id/urine_specific_gravity_tv"
+        />
+
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/uro_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿胆原"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/urine_specific_gravity_tv"/>
+
+    <EditText
+        android:id="@+id/uro_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="25"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/uro_tv"
+        android:layout_alignTop="@+id/uro_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        />
+
+
+
+    <TextView
+        android:id="@+id/uro_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/uro_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/uro_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="16"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/uro_level_tv"
+        android:layout_alignTop="@+id/uro_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/uro_normal_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="@string/left_arrow"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/uro_normal_tv"
+        android:layout_alignTop="@+id/uro_tv" />
+
+
+    <TextView
+        android:id="@+id/blo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="隐血"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/uro_tv"/>
+
+    <Spinner
+        android:id="@+id/blo_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/blo_tv"
+        android:layout_alignBottom="@+id/blo_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/blo_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/blo_spinner"
+        android:layout_alignBottom="@+id/blo_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+    <TextView
+        android:id="@+id/blo_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/blo_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/wbc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="白细胞"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/blo_tv"/>
+
+    <Spinner
+        android:id="@+id/wbc_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/wbc_tv"
+        android:layout_alignBottom="@+id/wbc_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/wbc_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/wbc_spinner"
+        android:layout_alignBottom="@+id/wbc_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+    <TextView
+        android:id="@+id/wbc_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/wbc_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/pro_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/wbc_tv"/>
+
+    <Spinner
+        android:id="@+id/pro_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/pro_tv"
+        android:layout_alignBottom="@+id/pro_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/pro_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/pro_spinner"
+        android:layout_alignBottom="@+id/pro_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+    <TextView
+        android:id="@+id/pro_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/pro_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/glu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿糖"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/pro_tv"
+        android:layout_below="@+id/pro_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        android:id="@+id/glu_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/glu_tv"
+        android:layout_alignBottom="@+id/glu_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/glu_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/glu_spinner"
+        android:layout_alignBottom="@+id/glu_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+    <TextView
+        android:id="@+id/glu_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/glu_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/bil_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="胆红素"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/glu_tv"/>
+
+    <Spinner
+        android:id="@+id/bil_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/bil_tv"
+        android:layout_alignBottom="@+id/bil_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/bil_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/bil_spinner"
+        android:layout_alignBottom="@+id/bil_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+    <TextView
+        android:id="@+id/bil_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/bil_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/ket_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="酮体"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/bil_tv"/>
+
+    <Spinner
+        android:id="@+id/ket_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/ket_tv"
+        android:layout_alignBottom="@+id/ket_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/ket_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/ket_spinner"
+        android:layout_alignBottom="@+id/ket_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+    <TextView
+        android:id="@+id/ket_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ket_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/rbc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿红细胞"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/ket_tv"/>
+
+    <Spinner
+        android:id="@+id/rbc_spinner"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/rbc_tv"
+        android:layout_alignBottom="@+id/rbc_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/rbc_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/rbc_spinner"
+        android:layout_alignBottom="@+id/rbc_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+
+    <TextView
+        android:id="@+id/rbc_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/rbc_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/col_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="尿液颜色"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rbc_tv"/>
+
+    <Spinner
+        android:id="@+id/col_spinner"
+        android:layout_width="@dimen/register_edit_width_xingming"
+        android:layout_height="@dimen/register_edit_height"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginLeft="5dp"
+
+        android:layout_toRightOf="@+id/col_tv"
+        android:layout_alignBottom="@+id/col_tv"
+
+        />
+    <ImageButton
+        android:id="@+id/col_spinner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_edit_height"
+        android:scaleType="centerInside"
+        android:background="@color/background_green"
+        android:layout_toRightOf="@+id/col_spinner"
+        android:layout_alignBottom="@+id/col_spinner"
+        android:layout_marginRight="@dimen/indicate_mini_size"
+        android:src="@drawable/arrow_down"
+        />
+    <TextView
+        android:id="@+id/col_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="正常"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/col_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/simple_height15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+    <TextView
+        android:id="@+id/date_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录日期："
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="@dimen/simple_height15"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/col_tv"/>
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2016-11-16"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/col_tv"
+        android:layout_toRightOf="@+id/date_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择日期"/>
+
+    <TextView
+        android:id="@+id/time_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录时间："
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/col_tv"
+        android:layout_toRightOf="@+id/date_tv"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="15:20"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/col_tv"
+        android:layout_toRightOf="@+id/time_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择时间" />
+</RelativeLayout>

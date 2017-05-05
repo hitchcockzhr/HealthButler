@@ -1,0 +1,1143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+    <View
+        android:id="@+id/line_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/liver_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="肝功能"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_below="@+id/line_tv2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/liver_delete_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line_tv2"
+        android:src="@drawable/aux_delete"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/liver_tv"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:id="@+id/aux_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/liver_tv">
+
+        <Button
+            android:id="@+id/personal_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="自测"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_green_stroke_shape"/>
+
+        <Button
+            android:id="@+id/healthy_keeper_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="管家"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tab_btn_pressed_shape"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/hospital_aux"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="医院"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/btn_green_stroke_shape"/>
+    </LinearLayout>
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/alt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="谷丙转氨酶"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/aux_type_layout"/>
+
+
+    <EditText
+        android:id="@+id/alt_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="3"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/alt_tv"
+        android:layout_alignTop="@+id/alt_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/alt_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="U/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/aux_type_layout"
+        android:layout_toRightOf="@+id/alt_et"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/alt_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/alt_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+    <TextView
+        android:id="@+id/alt_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="40"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alt_level_tv"
+        android:layout_alignTop="@+id/alt_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/alt_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alt_high_normal_tv"
+        android:layout_alignTop="@+id/alt_tv" />
+
+
+    <TextView
+        android:id="@+id/alt_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alt_normal_tv"
+        android:layout_alignTop="@+id/alt_tv"
+        />
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="谷草转氨酶"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alt_tv"/>
+
+    <EditText
+        android:id="@+id/ast_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ast_tv"
+        android:layout_alignTop="@+id/ast_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/ast_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="U/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/ast_et"
+        android:layout_alignTop="@+id/ast_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/ast_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ast_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/ast_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="40"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_level_tv"
+        android:layout_alignTop="@+id/ast_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/ast_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_high_normal_tv"
+        android:layout_alignTop="@+id/ast_tv" />
+
+
+    <TextView
+        android:id="@+id/ast_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_normal_tv"
+        android:layout_alignTop="@+id/ast_tv"
+        />
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ast_alt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="谷草/谷丙"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ast_tv"/>
+
+    <TextView
+        android:id="@+id/ast_alt_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ast_alt_tv"
+        android:layout_alignTop="@+id/ast_alt_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/ast_alt_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ast_alt_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/ast_alt_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_alt_level_tv"
+        android:layout_alignTop="@+id/ast_alt_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/ast_alt_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_alt_high_normal_tv"
+        android:layout_alignTop="@+id/ast_alt_tv" />
+
+
+    <TextView
+        android:id="@+id/ast_alt_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0.80"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ast_alt_normal_tv"
+        android:layout_alignTop="@+id/ast_alt_tv"
+        />
+
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ggp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="谷氨酰转移酶"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ast_alt_tv"/>
+
+    <EditText
+        android:id="@+id/ggp_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ggp_tv"
+        android:layout_alignTop="@+id/ggp_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/ggp_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="U/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/ggp_et"
+        android:layout_alignTop="@+id/ggp_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/ggp_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ggp_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/ggp_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="32"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ggp_level_tv"
+        android:layout_alignTop="@+id/ggp_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/ggp_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ggp_high_normal_tv"
+        android:layout_alignTop="@+id/ggp_tv" />
+
+
+    <TextView
+        android:id="@+id/ggp_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="7"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ggp_normal_tv"
+        android:layout_alignTop="@+id/ggp_tv"
+        />
+
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/alp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="碱性磷酸酶"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ggp_tv"/>
+
+    <EditText
+        android:id="@+id/alp_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/alp_tv"
+        android:layout_alignTop="@+id/alp_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/alp_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="U/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/alp_et"
+        android:layout_alignTop="@+id/alp_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/alp_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/alp_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/alp_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="128"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alp_level_tv"
+        android:layout_alignTop="@+id/alp_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/alp_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alp_high_normal_tv"
+        android:layout_alignTop="@+id/alp_tv" />
+
+
+    <TextView
+        android:id="@+id/alp_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="53"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alp_normal_tv"
+        android:layout_alignTop="@+id/alp_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/tbili_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="总胆红素"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alp_tv"/>
+
+    <EditText
+        android:id="@+id/tbili_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/tbili_tv"
+        android:layout_alignTop="@+id/tbili_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+    <TextView
+        android:id="@+id/tbili_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="umol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/tbili_et"
+        android:layout_alignTop="@+id/tbili_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/tbili_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/tbili_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/tbili_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="17.1"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tbili_level_tv"
+        android:layout_alignTop="@+id/tbili_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/tbili_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tbili_high_normal_tv"
+        android:layout_alignTop="@+id/tbili_tv" />
+
+
+    <TextView
+        android:id="@+id/tbili_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="5.1"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tbili_normal_tv"
+        android:layout_alignTop="@+id/tbili_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/dbili_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="直接胆红素"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tbili_tv"/>
+
+    <EditText
+        android:id="@+id/dbili_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/dbili_tv"
+        android:layout_alignTop="@+id/dbili_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/dbili_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="umol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/dbili_et"
+        android:layout_alignTop="@+id/dbili_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+    <TextView
+        android:id="@+id/dbili_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/dbili_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/dbili_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="3.4"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/dbili_level_tv"
+        android:layout_alignTop="@+id/dbili_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/dbili_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/dbili_high_normal_tv"
+        android:layout_alignTop="@+id/dbili_tv" />
+
+
+    <TextView
+        android:id="@+id/dbili_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="0.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/dbili_normal_tv"
+        android:layout_alignTop="@+id/dbili_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/ibili_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="间接胆红素"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/dbili_tv"/>
+
+    <EditText
+        android:id="@+id/ibili_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/ibili_tv"
+        android:layout_alignTop="@+id/ibili_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+    <TextView
+        android:id="@+id/ibili_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="umol/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/ibili_et"
+        android:layout_alignTop="@+id/ibili_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/ibili_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/ibili_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/ibili_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ibili_level_tv"
+        android:layout_alignTop="@+id/ibili_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/ibili_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ibili_high_normal_tv"
+        android:layout_alignTop="@+id/ibili_tv" />
+
+
+    <TextView
+        android:id="@+id/ibili_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="5.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ibili_normal_tv"
+        android:layout_alignTop="@+id/ibili_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/tp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="总蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ibili_tv"/>
+
+    <EditText
+        android:id="@+id/tp_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/tp_tv"
+        android:layout_alignTop="@+id/tp_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+    <TextView
+        android:id="@+id/tp_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="g/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/tp_et"
+        android:layout_alignTop="@+id/tp_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tp_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/tp_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/tp_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="80"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tp_level_tv"
+        android:layout_alignTop="@+id/tp_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/tp_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tp_high_normal_tv"
+        android:layout_alignTop="@+id/tp_tv" />
+
+
+    <TextView
+        android:id="@+id/tp_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="60"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tp_normal_tv"
+        android:layout_alignTop="@+id/tp_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/alb_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="白蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tp_tv"/>
+
+    <EditText
+        android:id="@+id/alb_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/alb_tv"
+        android:layout_alignTop="@+id/alb_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+
+    <TextView
+        android:id="@+id/alb_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="g/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/alb_et"
+        android:layout_alignTop="@+id/alb_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+    <TextView
+        android:id="@+id/alb_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/alb_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/alb_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="50"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_level_tv"
+        android:layout_alignTop="@+id/alb_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/alb_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_high_normal_tv"
+        android:layout_alignTop="@+id/alb_tv" />
+
+
+    <TextView
+        android:id="@+id/alb_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="35"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_normal_tv"
+        android:layout_alignTop="@+id/alb_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/glb_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="球蛋白"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alb_tv"/>
+
+    <EditText
+        android:id="@+id/glb_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/glb_tv"
+        android:layout_alignTop="@+id/glb_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"/>
+
+    <TextView
+        android:id="@+id/glb_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="g/L"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/glb_et"
+        android:layout_alignTop="@+id/glb_tv"
+        android:layout_marginLeft="5dp"/>
+
+
+    <TextView
+        android:id="@+id/glb_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/glb_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/glb_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="30.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/glb_level_tv"
+        android:layout_alignTop="@+id/glb_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/glb_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/glb_high_normal_tv"
+        android:layout_alignTop="@+id/glb_tv" />
+
+
+    <TextView
+        android:id="@+id/glb_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="20.0"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/glb_normal_tv"
+        android:layout_alignTop="@+id/glb_tv"
+        />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyTextView
+        android:id="@+id/alb_glb_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="白球比"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/glb_tv"/>
+
+    <TextView
+        android:id="@+id/alb_glb_et"
+        android:layout_width="@dimen/simple_height5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="12.5"
+        android:textSize="@dimen/txt_mid_size"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:layout_toRightOf="@+id/alb_glb_tv"
+        android:layout_alignTop="@+id/alb_glb_tv"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:selectAllOnFocus="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/alb_glb_level_tv"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:text="↑"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_alignTop="@+id/alb_glb_tv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/background_green"/>
+
+
+    <TextView
+        android:id="@+id/alb_glb_high_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2.00"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_glb_level_tv"
+        android:layout_alignTop="@+id/alb_glb_tv"
+        android:layout_marginRight="@dimen/simple_height15" />
+
+    <TextView
+        android:id="@+id/alb_glb_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="~"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_glb_high_normal_tv"
+        android:layout_alignTop="@+id/alb_glb_tv" />
+
+
+    <TextView
+        android:id="@+id/alb_glb_low_normal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="1.00"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/alb_glb_normal_tv"
+        android:layout_alignTop="@+id/alb_glb_tv"
+        />
+
+
+    <TextView
+        android:id="@+id/date_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录日期："
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/alb_glb_tv"/>
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="2016-11-16"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alb_glb_tv"
+        android:layout_toRightOf="@+id/date_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择日期"/>
+
+    <TextView
+        android:id="@+id/time_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="记录时间："
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alb_glb_tv"
+        android:layout_toRightOf="@+id/date_tv"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height4"
+        android:text="15:20"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/alb_glb_tv"
+        android:layout_toRightOf="@+id/time_title_tv"
+        android:layout_marginLeft="5dp"
+        android:hint="请选择时间" />
+</RelativeLayout>

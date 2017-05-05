@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginBottom="20dp">
+  
+    
+    <TextView
+        android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="@dimen/main_edit_height"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_max_size"
+        android:text="请选择  "
+        android:textColor="#5b5b5b"
+
+
+        android:layout_marginBottom="3dp"/>
+<LinearLayout
+    android:layout_width="@dimen/main_edit_weight"
+    android:layout_height="@dimen/main_edit_height"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/simple_white_solid_shape">
+    <TextView
+        android:id="@+id/diqu_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_max_size"
+        android:text="地 区"
+        android:textColor="#5b5b5b"
+         />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text=">"
+    android:textColor="#5b5b5b"
+
+    android:gravity="center_vertical"
+    android:paddingRight="10dp"/>
+</LinearLayout>
+
+     <TextView
+         android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="#f5f5f5"  />
+    <LinearLayout
+        android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="@dimen/main_edit_height"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/simple_white_solid_shape">
+    <TextView
+        android:id="@+id/yiyuan_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_max_size"
+        android:text="医 院"
+        android:textColor="#5b5b5b"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=">"
+            android:textColor="#5b5b5b"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"/>
+
+        </LinearLayout>
+    
+     <TextView
+         android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="#f5f5f5"  />
+    <LinearLayout
+        android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="@dimen/main_edit_height"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/simple_white_solid_shape">
+    <TextView
+        android:id="@+id/keshi_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_max_size"
+        android:text="科 室"
+        android:textColor="#5b5b5b"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=">"
+            android:textColor="#5b5b5b"
+
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"/>
+        </LinearLayout>
+     <TextView
+         android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="#f5f5f5"  />
+    <LinearLayout
+        android:layout_width="@dimen/main_edit_weight"
+        android:layout_height="@dimen/main_edit_height"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/simple_white_solid_shape">
+    <TextView
+        android:id="@+id/yisheng_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_max_size"
+        android:text="医 生"
+        android:textColor="#5b5b5b"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=">"
+            android:textColor="#5b5b5b"
+
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+           />
+        </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:background="@color/white"
+    	android:layout_marginTop="20dp"
+    	android:gravity="center_horizontal|center_vertical"
+        android:visibility="visible">
+        <Button
+	        android:id="@+id/yuyue_btn"
+            android:layout_width="wrap_content"
+	        android:layout_height="@dimen/main_edit_height"
+	        android:background="@drawable/simple_btn_selector"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/txt_mid_size"
+	        android:text="挂号"
+	        
+        />
+
+    </LinearLayout>
+    
+
+    
+
+</LinearLayout>

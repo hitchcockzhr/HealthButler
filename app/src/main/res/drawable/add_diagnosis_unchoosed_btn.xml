@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<item>
+    <shape android:shape="oval"
+        android:useLevel="false">
+        <solid android:color="@color/background_green" />
+        <size android:width="@dimen/add_diagnosis_inner_radiobtn_size"
+            android:height="@dimen/add_diagnosis_inner_radiobtn_size" />
+    </shape>
+</item>
+
+<item android:bottom="3dp" android:top="3dp" android:left="3dp" android:right="3dp">
+    <shape
+        android:shape="oval"
+        android:useLevel="false">
+        <solid android:color="@color/white" />
+
+    </shape>
+</item>
+</layer-list>

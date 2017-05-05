@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height3"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/background_green"
+        android:gravity="center_vertical"
+        android:text="私人医生"
+        android:textSize="@dimen/txt_mid_size"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="3px"
+        android:background="@color/deep_gray" />
+    <ListView
+        android:id="@+id/srys_jg_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent"
+        >
+    </ListView>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+    
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height3"
+        android:text=" 优惠信息" 
+        android:layout_marginTop="10px"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/background_green"
+        android:gravity="center_vertical"/>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+    <ListView
+        android:id="@+id/srys_fw_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent"  >
+    </ListView>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+    
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height3"
+        android:text=" 请选择支付方式"
+         android:textColor="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:layout_marginBottom="15px"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/yezf_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/yuerzhifu" />
+		<TextView
+            android:id="@+id/textview3"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="60dp"
+            android:text="     " />
+        <TextView
+            android:id="@+id/wxzf_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/weixinzhifu" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:gravity="center">
+    <Button
+        android:id="@+id/syrs_zf_btn"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:text="支  付"
+        android:textSize="@dimen/txt_mid_size"
+        android:background="@drawable/simple_btn_selector" />
+</LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/dialog_refund_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="收费"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应付"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/yingfu_tv"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实付"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <EditText
+            android:id="@+id/shifu_tv"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（不填默认是应付）"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找零"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/zhaoling_tv"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        >
+
+        <Button
+            android:id="@+id/dialog_shoufei_ok_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/txt_min_size"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_white_stroke_selector"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_min_size"
+            android:layout_marginRight="@dimen/padding_max_size"/>
+
+        <Button
+            android:id="@+id/dialog_shoufei_cancel_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/txt_min_size"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_white_stroke_selector"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_min_size"
+            android:layout_marginRight="@dimen/padding_min_size"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

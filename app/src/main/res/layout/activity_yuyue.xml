@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true">
+
+    
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" >
+
+        
+       <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height3"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/background_green"
+           android:gravity="center_vertical"
+            android:text="可预约门诊时间"
+           android:textSize="@dimen/txt_mid_size"/>
+
+        <Button
+            android:id="@+id/refresh_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="刷新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/simple_btn_selector"
+            android:layout_gravity="center_vertical"
+            />
+
+ 
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="3px"
+        android:background="#f5f5f5"
+        android:layout_marginTop="2dp"/>
+    <ListView
+        android:id="@+id/sche_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@color/white"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px">
+    </ListView>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp">
+	    <Button
+	        android:id="@+id/ok_btn"
+	        android:layout_width="0dp"
+	        android:layout_height="@dimen/simple_height4"
+            android:layout_weight="1"
+	        android:layout_marginTop="15px"
+            android:text="确  认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_mid_size"
+	        android:background="@drawable/simple_btn_selector"
+            android:layout_marginLeft="30dp"
+	        />
+
+	    <Button
+	        android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/simple_height4"
+            android:layout_weight="1"
+            android:layout_marginTop="15px"
+            android:text="取  消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/simple_btn_selector"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+	        />
+    </LinearLayout>
+
+</LinearLayout>

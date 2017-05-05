@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/background_layout"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/background_green">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/login_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:gravity="center"
+
+            android:background="@drawable/login_bg_shape"
+
+           >
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:hint="用户名"
+                android:layout_marginTop="60dp"
+                android:textSize="@dimen/txt_mid_size"
+                android:background="@drawable/login_textview_shape"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/psd_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/name_et"
+                android:layout_alignRight="@+id/name_et"
+                android:layout_below="@+id/name_et"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="密码"
+                android:textSize="@dimen/txt_mid_size"
+                android:inputType="textPassword"
+                android:background="@drawable/login_textview_shape" >
+
+
+            </EditText>
+
+
+
+            <TextView
+                android:id="@+id/regBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/psd_et"
+                android:background="@drawable/login_reg_bg_shape"
+                android:text="注册"
+                android:layout_alignLeft="@+id/name_et"
+                android:textSize="@dimen/txt_mid_size" />
+
+
+
+            <TextView
+                android:id="@+id/foget_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/psd_et"
+                android:background="@drawable/login_reg_bg_shape"
+                android:layout_marginTop="15dp"
+                android:layout_alignRight="@+id/psd_et"
+
+                android:text="找回密码"
+                android:textSize="@dimen/txt_mid_size" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/psd_et"
+                android:layout_alignRight="@+id/psd_et"
+                android:layout_below="@+id/regBtn"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginTop="15dp"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:background="@drawable/simple_btn_selector" />
+
+            <CheckBox
+                android:id="@+id/remember_psd_cb"
+                android:layout_alignLeft="@+id/loginBtn"
+                android:layout_below="@+id/loginBtn"
+
+
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="@dimen/add_diagnosis_radiobtn_size"
+                android:layout_height="@dimen/add_diagnosis_radiobtn_size"
+                android:button="@null"
+                android:focusable="true"
+                android:background="@drawable/add_diagnosis_radiobtn_selector"
+                android:checked="false"
+
+
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/add_diagnosis_radiobtn_size"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:text="记住密码"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_alignBaseline="@+id/remember_psd_cb"
+                android:layout_below="@+id/loginBtn"/>
+
+        </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/doctor_login"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_marginBottom="175dp"
+        android:visibility="visible"/>
+
+
+</FrameLayout>

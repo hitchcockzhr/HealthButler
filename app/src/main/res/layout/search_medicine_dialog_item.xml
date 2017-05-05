@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/simple_height4"
+    android:padding="5dp"
+    android:id="@+id/search_medicine_dialog_item_layout">
+
+    <TextView
+        android:id="@+id/medicine_name_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="药品名称"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/medicine_product_name_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="商品名称"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/medicine_guige_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="规格"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/schedule_set_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="新增处方"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="药品名称"
+                android:textSize="@dimen/txt_min_size"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="商品名称"
+                android:textSize="@dimen/txt_min_size"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="规格"
+                android:textSize="@dimen/txt_min_size"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <ListView
+            android:id="@+id/new_medicine_listview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="10dp"
+            />
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height3"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="right"
+            >
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:background="@drawable/simple_btn_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:background="@drawable/simple_btn_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

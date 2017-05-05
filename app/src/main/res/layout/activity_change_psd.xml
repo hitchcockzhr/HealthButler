@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="修改密码"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+
+            android:layout_marginRight="40dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/old_psd_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_marginLeft="@dimen/simple_height3"
+        android:layout_marginRight="@dimen/simple_height3"
+        android:layout_marginTop="@dimen/simple_height3"
+        android:ems="10"
+        android:hint="请输入原密码"
+        android:textSize="@dimen/txt_mid_size"
+        android:background="@drawable/buttonstyle"
+        android:inputType="textPassword" />
+
+
+    <EditText
+        android:id="@+id/new_psd_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_marginLeft="@dimen/simple_height3"
+        android:layout_marginRight="@dimen/simple_height3"
+        android:layout_marginTop="@dimen/simple_height3"
+        android:hint="请输入新密码"
+        android:textSize="@dimen/txt_mid_size"
+        android:background="@drawable/buttonstyle"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+
+    <EditText
+        android:id="@+id/new_psd_again_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_marginLeft="@dimen/simple_height3"
+        android:layout_marginRight="@dimen/simple_height3"
+        android:layout_marginTop="@dimen/simple_height3"
+        android:hint="请再次输入新密码"
+        android:textSize="@dimen/txt_mid_size"
+        android:background="@drawable/buttonstyle"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/simple_height3"
+        >
+        <Button
+        android:id="@+id/modify_psw_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@drawable/simple_btn_selector"
+        android:textColor="@color/white"
+        android:text="修 改"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:textSize="@dimen/txt_mid_size"/>
+
+
+        
+    </LinearLayout>
+
+    
+
+</LinearLayout>

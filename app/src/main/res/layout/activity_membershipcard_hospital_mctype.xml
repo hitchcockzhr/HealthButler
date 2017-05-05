@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/hospital_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="XX社区卫生院"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/add_mctype_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:textColor="@color/background_green"
+            android:textSize="@dimen/arrow_txt_size"
+            android:gravity="center"
+            android:text="+"
+
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+    <ListView
+        android:id="@+id/mctype_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/dialog_refund_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="修改处方"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="#FFFFFF"
+        android:layout_margin="3dp"
+        >
+
+        <TextView
+            android:id="@+id/selected_new_medicine_product_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="商品名"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/selected_new_medicine_guige_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="规格"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@color/white"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="#FFFFFF"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <Spinner
+            android:id="@+id/pinci_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/simple_height4"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+            />
+        <ImageButton
+            android:id="@+id/ks_spinner_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:src="@drawable/arrow_down"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="每次用量"
+            android:textSize="@dimen/txt_min_size"
+            android:gravity="bottom"
+            android:background="@color/white"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:orientation="horizontal"
+        android:id="@+id/pinci_edit"
+        android:focusable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="天数"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Grey"
+                />
+            <EditText
+                android:id="@+id/drugs_tianshu_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_edit_height"
+                android:gravity="center"
+                android:hint="请输入天数"
+                android:inputType="numberDecimal"
+                android:text=""
+                android:textSize="@dimen/txt_min_size"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+
+                android:background="@drawable/buttonstyle"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数量"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Grey"
+
+                />
+
+            <EditText
+                android:id="@+id/drugs_shuangliang_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_edit_height"
+                android:gravity="center"
+                android:hint="请输入数量"
+                android:inputType="numberDecimal"
+                android:text=""
+                android:textSize="@dimen/txt_min_size"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+
+                android:background="@drawable/buttonstyle"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+        <Spinner
+            android:id="@+id/special_case_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/simple_height4"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="5dp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height4"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:src="@drawable/arrow_down"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/drugs_jiage_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_edit_height"
+            android:gravity="center"
+            android:hint="价格"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textSize="@dimen/txt_min_size"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/buttonstyle"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Grey"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+
+        <Button
+            android:id="@+id/new_medicine_ok_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/new_medicine_cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="13dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

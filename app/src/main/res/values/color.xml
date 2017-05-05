@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- color -->
+    <color name="item_green">#46D794</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background_green">#3AAB77</color>
+    <color name="gray">#EBEBEB</color>
+    <color name="blue">#79C9FC</color>
+    <color name="blue_deep">#0000AA</color>
+    <color name="light_gray">#f0f0f0</color>
+    
+    
+      <color name="canlendar_text_color">#000000</color>  
+
+	<drawable name="button_normal2">#46D794</drawable>
+ 	<drawable name="button_pressed">#a44100</drawable>
+    <color name="deep_gray">#B1B0A7</color>
+
+
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="Grey">#BEBEBE</color>
+
+    <color name="red">#FF3030</color>
+    <color name="light_red">#FF6030</color>
+    <color name="colorPrimary">#FF1493</color>
+    <color name="colorPrimaryDark">#D02090</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray_txt">#5b5b5b</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="yellow">#C7C700</color>
+</resources>

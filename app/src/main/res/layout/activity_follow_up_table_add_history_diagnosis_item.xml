@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/simple_height3"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/current_diagnosis_item_layout"
+    >
+    <TextView
+        android:id="@+id/current_diagnosis_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/txt_min_size"
+        android:gravity="center_vertical"
+        android:text="高血压"
+        android:padding="5dp"/>
+    <Button
+        android:id="@+id/current_diagnosis_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_height3"
+
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:text="删除"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+
+        android:textColor="@color/white"
+        android:background="@drawable/btn_red_selector"
+        android:textSize="@dimen/txt_min_size"
+        android:focusable="false"
+        />
+
+
+
+</FrameLayout>

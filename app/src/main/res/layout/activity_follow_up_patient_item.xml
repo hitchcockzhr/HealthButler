@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:text="患者姓名"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/patient_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:text="性别"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/patient_age_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:text="年龄"
+                android:textSize="@dimen/txt_mid_size"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/save_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/save"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="健康管家"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="家庭医生"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center" />
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/remainder_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余："
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/remainder_days_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_toRightOf="@+id/remainder_tv"
+                android:layout_alignBottom="@+id/remainder_tv"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/day_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/remainder_days_tv"
+                android:layout_alignBottom="@+id/remainder_days_tv"/>
+
+            <Spinner
+                android:id="@+id/manager_communication_spinner"
+                android:layout_width="@dimen/register_edit_width_name"
+                android:layout_height="@dimen/register_edit_height"
+                android:background="@drawable/buttonstyle"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/remainder_tv"
+                android:layout_centerHorizontal="true"
+
+                />
+            <ImageButton
+                android:id="@+id/manager_communication_spinner_image"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/register_edit_height"
+                android:scaleType="centerInside"
+                android:background="@color/background_green"
+                android:layout_toRightOf="@+id/manager_communication_spinner"
+                android:layout_alignBottom="@+id/manager_communication_spinner"
+                android:layout_marginRight="@dimen/indicate_mini_size"
+                android:src="@drawable/arrow_down"
+                />
+
+
+            <Button
+                android:id="@+id/remark_btn"
+                android:layout_width="@dimen/simple_height5"
+                android:layout_height="@dimen/simple_height3"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:text="描述"
+                android:layout_below="@+id/manager_communication_spinner"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="健康管家近期事件"
+                android:textSize="15dp"
+                android:layout_alignBottom="@+id/remark_btn" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/deep_gray"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/sign_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未签约"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginLeft="5dp"
+               />
+
+            <Button
+                android:id="@+id/not_sign_remark_btn"
+                android:layout_width="@dimen/simple_height5"
+                android:layout_height="@dimen/simple_height3"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:text="描述"
+                android:layout_below="@+id/sign_tv"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginTop="45dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height35"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="类型"
+            android:textSize="@dimen/txt_mid_size"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="描述"
+            android:textSize="@dimen/txt_mid_size"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="操作人"
+            android:textSize="@dimen/txt_mid_size"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="日期"
+            android:textSize="@dimen/txt_mid_size"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/txt_mid_size"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/manager_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@color/deep_gray"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"
+        android:layout_margin="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:text="客户类型"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+
+        <Spinner
+            android:id="@+id/user_type_spinner"
+            android:layout_width="@dimen/register_year_spinner_width"
+            android:layout_height="@dimen/register_edit_height"
+
+            android:background="@drawable/buttonstyle"
+            android:layout_marginLeft="20dp"
+
+            />
+        <ImageButton
+            android:id="@+id/user_type_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/register_edit_height"
+            android:scaleType="centerInside"
+            android:background="@color/background_green"
+            android:layout_marginRight="@dimen/indicate_mini_size"
+            android:src="@drawable/arrow_down"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/follow_up_table_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@drawable/simple_btn_selector"
+        android:textColor="@color/white"
+        android:text="随访表"
+        android:layout_marginLeft="@dimen/simple_height20"
+        android:layout_marginRight="@dimen/simple_height20"
+        android:textSize="@dimen/txt_mid_size"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+    
+
+</LinearLayout>

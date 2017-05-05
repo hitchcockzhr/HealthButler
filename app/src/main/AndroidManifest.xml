@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.housekeeper.ar.healthhousekeeper" >
+
+	<uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+		
+	<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ConsultationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MembershipCardActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FollowUpClinicActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".TransferTreatActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuidanceHomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterPatientActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuidanceBottomTabActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RememberPwdActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".personalinfo.ModifyPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".personalinfo.ModifyInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".personalinfo.PersonalInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".personalinfo.UpdateVersionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".personalinfo.UpdateVersionFinishActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".personalinfo.UpdateVersionLogActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".picture.Picture" android:screenOrientation="portrait"/>
+        <activity android:name=".picture.SelectPictureActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".picture.SelectRegPictureActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".guidance.PatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.GuidanceActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".guidance.SeeDoctorActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.DingDanXiangQingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.SiRenYiShengActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".guidance.YiShengJianJieActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.YuyueActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.YuYueGuanLiActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".guidance.PrescriptionTab" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.CurrentPrescriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.HistoryPrescriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.NewPrescriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.HospitalListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".guidance.DoctorListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.SignActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.SignHomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.SignDoctorListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.SignPatientTabActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".sign.HasSignedPatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.NotFinishPatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".sign.NotSignPatientListActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".followup.FollowUpPatientActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FollowUpTableActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FollowUpTableCatchActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".followup.FUTableAddHistoryDiagnoseActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableDiabetesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTAbleHypertensionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryMedicineActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableNewMedicineActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTAbleCHDActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableDiagnosisActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableStrokeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTAbleDyslipidemiaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxLiverFunctionUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxBloodPressUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxFbgUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxUrineRoutineUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxHeightWeightUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxRenalFunctionUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxBloodRoutineUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxBloodFatUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxGhUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAuxPbgUnderstandingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryDiabetesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryCHDActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTAbleHistoryHypertensionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryDyslipidemiaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableHistoryStrokeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableVisitActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableServiceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableAddServiceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".followup.FUTableSingleServiceActivity" android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".checkstand.PayPatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.CheckStandTab" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.RefundPatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.RefundMedicineDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.RefundRegisterDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.PatientPayListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".checkstand.MedicineDetailActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".community.AddCommmunityTab" android:screenOrientation="portrait"/>
+        <activity android:name=".community.CommunityActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".community.HospitalActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".guidance.SeeDoctorNewActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".cascade.activity.AddressBaseActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".cascade.activity.MainActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".community.AddCommunityActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".community.AddHospitalActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".community.ExistingCommunityListActivity" android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".membershipcard.MCHoapitalAddMCTypeActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".membershipcard.MCHospitalListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCHospitalMCTypeActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".membershipcard.MembershipCardTab" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCHospitalPatientListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCHospitalSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCHospitalApplyMCActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".membershipcard.MCHospitalRechargeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCHospitalRechargeSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCPatientTabListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCPatientTabPerMCActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCPatientTabUnSubActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".membershipcard.MCPatientTabunSubSuccessActivity" android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".appointmentlist.AppointmentListActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".teamlist.TeamListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".autoregpatientlist.AutoRegPatientListActivity" android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".packages.PackagesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".packages.PackagesRechargeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".TransferTreatActivityGroupTab" android:screenOrientation="portrait"/>
+
+        <activity android:name=".GuidanceHomeActivityGroupTab" android:screenOrientation="portrait"/>
+        <activity android:name=".FollowUpClinicActivityGroupTab" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">咻医生健康导诊</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="tab_home">首页</string>
+    <string name="tab_transfer">转诊</string>
+    <string name="tab_consult">会诊</string>
+    <string name="tab_membership">会员卡</string>
+    <string name="tab_followup_clinic">随访</string>
+
+    <string name="photo">照片</string>
+
+
+    <string name="left_arrow">&lt;</string>
+    <string name="right_arrow">&gt;</string>
+
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+
+    <string name="tab_history_medicine">历史处方</string>
+    <string name="tab_new_medicine">新处方</string>
+
+    <string name="tab_community">小区</string>
+    <string name="tab_hospital">医院</string>
+    <string name="tab_patient">患者</string>
+
+    <string name="tab_fukuan">付费</string>
+    <string name="tab_tuikuan">退费</string>
+
+    <string name="tab_not_sign">未签约</string>
+    <string name="tab_has_signed">已签约</string>
+    <string name="tab_not_finish">未完成</string>
+
+</resources>

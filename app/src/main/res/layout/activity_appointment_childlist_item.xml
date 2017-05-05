@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/simple_height4"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="3dp">
+
+
+
+    <TextView
+        android:id="@+id/num_tv"
+        android:text="1"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/txt_min_size"/>
+    <com.housekeeper.ar.healthhousekeeper.RoundImageView
+        android:id="@+id/head_imageview"
+        android:layout_width="@dimen/simple_height4"
+        android:layout_height="@dimen/simple_height4"
+        android:src="@drawable/header_photo"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:id="@+id/name_tv"
+        android:text="姓名"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/txt_min_size"/>
+    <TextView
+        android:id="@+id/sex_tv"
+        android:text="性别"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/txt_min_size"/>
+    <TextView
+        android:id="@+id/age_tv"
+        android:text="年龄"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/txt_min_size"/>
+
+    <TextView
+        android:id="@+id/id_tv"
+        android:text="号"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="@dimen/simple_height4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/txt_min_size"/>
+
+</LinearLayout>

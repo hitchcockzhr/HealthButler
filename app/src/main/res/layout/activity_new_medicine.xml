@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp">
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_bottom_edittextfield"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:hint="药品"
+            />
+        <ImageView
+            android:id="@+id/search_image_view"
+            android:layout_width="@dimen/search_size"
+            android:layout_height="@dimen/search_size"
+            android:src="@drawable/search"
+            android:scaleType="centerInside"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+
+    <LinearLayout
+        android:id="@+id/current_medicine_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+
+        <com.housekeeper.ar.healthhousekeeper.FlowLayout
+            android:id="@+id/new_medicine_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:horizontalSpacing="10dp"
+            app:verticalSpacing="10dp"
+            app:orientation="horizontal"
+            app:childGravity="center"
+            >
+        </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+
+
+    </ScrollView>
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="5dp">
+
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height35"
+            android:text="确认"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp" />
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/simple_height35"
+            android:text="取消"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>

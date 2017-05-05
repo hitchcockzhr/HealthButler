@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/gray">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="找回密码"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+
+            android:layout_marginRight="40dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_register_username_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height45"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:layout_marginTop="@dimen/simple_height3"
+            android:ems="10"
+            android:hint="请输入手机号"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/login_textview_shape"
+            android:inputType="textPassword" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:layout_marginTop="@dimen/simple_height3">
+
+            <EditText
+                android:id="@+id/et_register_code_id"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+
+                android:ems="10"
+                android:hint="输入验证码"
+                android:textSize="@dimen/txt_mid_size"
+                android:background="@drawable/login_textview_shape"
+                android:inputType="textPassword" />
+            <Button
+                android:id="@+id/bt_getcode_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:background="@drawable/btn_green_stroke_selector"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/background_green"
+                android:textSize="@dimen/txt_min_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="@dimen/simple_height3"
+            >
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:text="确 定"
+                android:layout_marginLeft="@dimen/simple_height3"
+                android:layout_marginRight="@dimen/simple_height3"
+                android:textSize="@dimen/txt_mid_size"/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/find_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/new_psd_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:layout_marginTop="@dimen/simple_height3"
+            android:hint="请输入新密码"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/login_textview_shape"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+
+        <EditText
+            android:id="@+id/new_psd_again_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:layout_marginTop="@dimen/simple_height3"
+            android:hint="请再次输入新密码"
+            android:textSize="@dimen/txt_mid_size"
+            android:background="@drawable/login_textview_shape"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="@dimen/simple_height3"
+            >
+            <Button
+                android:id="@+id/modify_psw_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:text="修 改"
+                android:layout_marginLeft="@dimen/simple_height3"
+                android:layout_marginRight="@dimen/simple_height3"
+                android:textSize="@dimen/txt_mid_size"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    
+
+</LinearLayout>

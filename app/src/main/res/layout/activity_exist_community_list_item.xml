@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <RadioButton
+        android:id="@+id/select_radio"
+        android:layout_width="@dimen/add_diagnosis_radiobtn_size"
+        android:layout_height="@dimen/add_diagnosis_radiobtn_size"
+        android:button="@null"
+        android:focusable="true"
+        android:background="@drawable/add_diagnosis_radiobtn_selector"
+        android:checked="false"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:text="小区"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/address_tv"
+            android:text="地址"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

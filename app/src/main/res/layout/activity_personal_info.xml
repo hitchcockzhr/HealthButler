@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true"
+	android:clipToPadding="true"
+	android:background="@color/white">
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@color/background_green"
+		android:paddingTop="5dp"
+		android:paddingBottom="10dp">
+		<ImageView
+			android:id="@+id/xiaoxi_image"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_gravity="right"
+			android:layout_marginRight="10dp"
+			android:src="@drawable/xiaoxi_new"
+			android:background="@color/background_green"/>
+<!--
+		<ImageView
+			android:id="@+id/doc_head_iv"
+			android:layout_width="@dimen/simple_height6"
+			android:layout_height="@dimen/simple_height6"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_horizontal"
+			android:background="@drawable/circle_shape"
+			android:src="@drawable/doctor_login" />-->
+		<!--  截取照片成圆形，若是以后上传照片，而不用doctor_login图片，可把此处放开-->
+                <com.housekeeper.ar.healthhousekeeper.RoundImageView
+                    android:id="@+id/doc_head_iv"
+                    android:layout_width="@dimen/simple_height6"
+                    android:layout_height="@dimen/simple_height6"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/header_photo"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    />
+                <TextView
+                    android:id="@+id/id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lv.2"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:layout_marginTop="3dp"/>
+
+
+                <Button
+                    android:id="@+id/chakan_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="查看"
+                    android:background="#F69610"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <TextView
+                android:background="@color/light_gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                />
+
+
+            <TextView
+                android:background="@color/light_gray"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/person_info_docotor_card_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="修改个人信息"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="center_horizontal|center_vertical" />
+
+                <TextView
+                    android:id="@+id/modify_info_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="修改个人信息 > "
+                    android:textSize="@dimen/txt_mid_size"
+                    android:paddingRight="5dp"
+                    android:gravity="right|center_vertical" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"       />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/person_info_pwd_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="修改密码"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="center_horizontal|center_vertical" />
+
+                <TextView
+                    android:id="@+id/modify_password_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="修改登录密码 > "
+                    android:paddingRight="5dp"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="right|center_vertical" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"       />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/person_info_set_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/setting_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="设置"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="left|center_vertical" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"       />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/personal_info_update_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/update_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="检测新版本"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="left|center_vertical" />
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"       />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/personal_info_verson_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/help_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="版权与帮助"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="left|center_vertical" />
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"       />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/simple_height4"
+                android:paddingLeft="@dimen/padding_15_size"
+                android:paddingRight="@dimen/padding_15_size"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_height25"
+                    android:layout_height="@dimen/simple_height25"
+                    android:src="@drawable/personal_info_exit_image"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/exit_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:text="退出"
+                    android:textSize="@dimen/txt_mid_size"
+                    android:gravity="left|center_vertical" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>

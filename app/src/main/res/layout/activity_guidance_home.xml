@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:background="@color/background_green"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp"/>
+    </LinearLayout>
+    <!-- 个人信息 -->
+
+    <LinearLayout
+        android:id="@+id/personal_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_info_item_height"
+
+
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_mid_size">
+
+        <!-- 个人图片 -->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_mid_size"
+            android:layout_marginRight="@dimen/padding_mid_size"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/photo"
+                android:textSize="@dimen/txt_mid_size" />
+
+            <ImageView
+                android:id="@+id/personal_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/photo" />
+        </FrameLayout>
+        <!--
+              <ImageView
+                   android:id="@+id/personal_photo"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/photo" />
+        -->
+        <LinearLayout
+            android:id="@+id/personal_info_txt_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 个人等级 -->
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="江湖郎中"
+                android:textSize="@dimen/txt_max_size" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随诊人数："
+                    android:textSize="@dimen/txt_mid_size" />
+
+                <TextView
+                    android:id="@+id/follow_up_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="@dimen/txt_mid_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人"
+                    android:textSize="@dimen/txt_mid_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/register_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="@dimen/simple_height4"
+                android:src="@drawable/personal_info_verson_image"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/register_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_mid_size"
+                android:text="登记注册"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/deep_gray"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/guidance_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="@dimen/simple_height4"
+                android:src="@drawable/guidance"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/guidance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_mid_size"
+                android:text="导诊预约"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/gray_corner_shape"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/padding_mid_size"
+       >
+      <com.housekeeper.ar.healthhousekeeper.RoundImageView
+          android:layout_width="@dimen/simple_height6"
+          android:layout_height="@dimen/simple_height6"
+          android:src="@drawable/header_photo"
+          android:layout_marginLeft="10dp"
+          android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/qianyue_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签约医生"
+                android:textSize="@dimen/txt_mid_size"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社区全科、专科医生"
+                android:textSize="@dimen/txt_min_size"
+                android:textColor="@color/deep_gray"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="负责社区"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/community_more_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/window_top_size"
+                android:background="@color/white"
+                android:text="+"
+                android:textColor="@color/background_green"
+                android:textSize="35sp"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/community_listview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:listSelector="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:divider="@color/white"/>
+
+        <ListView
+            android:id="@+id/hospital_listview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:listSelector="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:divider="@color/white"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

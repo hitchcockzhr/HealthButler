@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+ <RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/setsetface_iv_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dayspinner"
+        android:layout_alignLeft="@+id/regbtn"
+        android:layout_margin="20dip"
+        android:layout_marginLeft="24dp"
+        android:clickable="true"
+        android:padding="5dip" >
+
+        <ImageView
+            android:id="@+id/setface_iv"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:src="@drawable/mini_avatar" />
+
+        <TextView
+            android:id="@+id/setsetface_iv_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/setface_iv"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/setface_iv"
+            android:text="上传图片"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+

@@ -1,0 +1,241 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="糖化血红蛋白检查解读"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="介绍"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        糖化血红蛋白是人体血液中红细胞内的血红蛋白与血糖结合的产物。血糖和血红蛋白的结合生成糖化血红蛋白是不可逆反应，并与血糖浓度成正比，且保持120天左右，所以可以观测到120天之前的血糖浓度。糖化血红蛋白的英文代号为HbA1c。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        糖化血红蛋白能够反映过去2～3个月血糖控制的平均水平，它不受偶尔一次血糖升高或降低的影响，因此对糖化血红蛋白进行测定，可以比较全面地了解过去一段时间的血糖控制水平。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="解读"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:id="@+id/understanding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:text="糖化血红蛋白"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        世界权威机构对于糖化血红蛋白有着明确的控制指标，ADA（美国糖尿病学会）建议糖化血红蛋白控制在小于7%，IDF（国际糖尿病联盟）建议糖化血红蛋白控制标准为小于6.5%，目前我国将糖尿病患者糖化血红蛋白的控制标准定为6.5%以下。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gray_corner_shape"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4%～6%：血糖控制正常。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6%～7%：血糖控制比较理想。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7%～8%：血糖控制一般。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8%～9%：控制不理想，需加强血糖控制，多注意饮食结构及运动，并在医生指导下调整治疗方案。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">9%：血糖控制很差，是慢性并发症发生发展的危险因素，可能引发糖尿病性肾病、动脉硬化、白内障等并发症，并有可能出现酮症酸中毒等急性合并症。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="注意事项"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.发现治疗中存在的问题。如果糖尿病患者经常监测血糖都显示控制较好，而糖化血红蛋白偏高，则需考虑是否平时监测血糖不够全面（如只测空腹血糖而忽略了餐后血糖），或者可能血糖仪测出的数值不够准确（如机器老化，试纸受潮、过期等）。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.如果某位糖尿病患者血糖波动较大，经常发生低血糖，继而又发生高血糖，由于糖化血红蛋白是反应血糖的平均值，所以其糖化血红蛋白完全有可能维持在正常范围。在这种情况下，它的数值就不能反映真正的血糖变化了。同时，糖化血红蛋白还受红细胞的影响，在合并影响红细胞质和量的疾病（如肾脏疾病、溶血性贫血等）时，所测得的糖化血红蛋白也不能反映真正的血糖水平。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.指导治疗方案的调整。在临床治疗中，如能同时测定血糖与糖化血红蛋白，可以更好地全面判断病情，及时调整治疗方案。当空腹血糖超过患者糖化血红蛋白对应的预测值时，则显示近期血糖控制不好，可能与采血时紧张、劳累、晚餐进食过多、治疗不当、急性并发症等有关，需要调整治疗方案。比如某糖尿病患者定期监测糖化血红蛋白均在6%～7%，而最近一次为8.2%，这表明以往的治疗方案已不能较好地控制血糖，需要重新调整方案。相反，如果空腹血糖低于糖化血红蛋白对应的预测值，甚至达到正常标准，则显示近期血糖控制良好，治疗对症。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.普及糖尿病知识，更新治疗理念，监测并保持糖化血红蛋白达标，更早、更合理地使用胰岛素等药物治疗，对于控制糖尿病并发症的发生发展尤为重要。目前临床提倡对2型糖尿病患者采取积极治疗方法：尽早药物治疗、尽早联合治疗。糖尿病患者血糖控制未达到目标或治疗方案调整后，应每3个月检查一次糖化血红蛋白；血糖控制达到目标后也应每年至少检查2次糖化血红蛋白。 "
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

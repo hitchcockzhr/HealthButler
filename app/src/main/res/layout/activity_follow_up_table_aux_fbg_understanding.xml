@@ -1,0 +1,246 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="空腹血糖检查解读"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="介绍"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        空腹血糖正常值对于鉴别糖尿病与糖尿病前期有着重要的临床价值。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        糖尿病前期患者经科学的饮食加运动，并向其补充抗氧化膳食营养素如虾青素等并进行行为干预，对预防2型糖尿病（T2DM）可能起积极作用。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        糖尿病人同样可以通过治疗防止病情的恶化、预防并发症的发生。对于糖尿病患者来说，除了空腹血糖的检测，餐后血糖也是衡量控制效果的重要标志，因为有些糖尿病患者主要表现为餐后血糖升高，空腹血糖正常。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        空腹血糖检查是诊断糖尿病最可靠的方法。一般对尿糖阳性或尿糖虽阴性但有高度怀疑的病人，均需做空腹血糖测定。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="解读"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:id="@+id/understanding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:text="空腹血糖"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        一般空腹全血血糖为3.9～6.1毫摩尔/升(70～110毫克/分升)，血浆血糖为3.9～6.9毫摩尔/升(70～125毫克/分升)。以下是诊断糖尿病的几个情况："
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gray_corner_shape"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空腹全血血糖≥6.7毫摩尔/升(120毫克/分升)、血浆血糖≥7.8毫摩尔/升(140毫克/分升)，2次重复测定可诊断为糖尿病。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当空腹全血血糖在5.6毫摩尔/升(100毫克/分升)以上，血浆血糖在6.4毫摩尔/升(115毫克/分升)以上，应做糖耐量试验。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当空腹全血血糖超过11.1毫摩尔/升(200毫克/分升)时，表示胰岛素分泌极少或缺乏。因此，空腹血糖显著增高时，不必进行其它检查，即可诊断为糖尿病。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="注意事项"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.测空腹血糖最好在清晨6：00～8：00取血。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.采血前不用降糖药、不吃早餐、不运动。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.测空腹血糖前，要保证从前一日晚餐后至次日清晨做检查时空腹8~12小时，超过12个小时以后的“超空腹”状态会影响检查结果的可靠程度，这时的血糖数值已经不能代表“空腹血糖”了。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.如果空腹抽血的时间太晚，所测的血糖值很难真实反映患者的治疗效果，其结果可能偏高或偏低。 "
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.抽血的前一天晚上，应保持平时的生活习惯及正常饮食，不要刻意地节食挨饿，更不要暴饮暴食、大量进食高脂类食物，饭菜以清淡为宜，不要喝酒，饭后不要喝咖啡、浓茶等，并保证充足睡眠。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fbg_pic"
+            android:scaleType="center"/>
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

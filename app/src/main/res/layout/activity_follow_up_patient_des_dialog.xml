@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/schedule_set_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="添加描述"
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/type_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="    类型："
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="续费"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/type_tv1"
+            android:layout_alignTop="@+id/type_tv1"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/des_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="    描述："
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/type_tv1"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:id="@+id/des_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height35"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/schedule_set_time_text_shape"
+            android:textSize="@dimen/txt_mid_size"
+            android:hint="请输入用户需求"
+            android:layout_toRightOf="@+id/des_tv1"
+            android:layout_below="@+id/type_tv1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/name_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="操作人："
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/des_tv1"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height35"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_toRightOf="@+id/name_tv1"
+            android:layout_below="@+id/des_tv1"
+            android:layout_marginTop="5dp"
+            android:text="123"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/date_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="    日期："
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="@dimen/simple_height15"
+            android:gravity="center"
+            android:layout_below="@+id/name_tv1"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:text="2016-11-16"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_below="@+id/name_tv1"
+            android:layout_toRightOf="@+id/date_title_tv"
+            android:layout_marginLeft="10dp"
+            android:hint="请选择日期"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height35"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/date_title_tv">
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="@dimen/txt_min_size"
+                android:background="@drawable/simple_btn_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

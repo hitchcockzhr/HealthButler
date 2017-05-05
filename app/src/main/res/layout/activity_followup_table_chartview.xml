@@ -1,0 +1,49 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/window_top_size"
+            android:text="线图"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"/>
+
+
+
+    </LinearLayout>
+    <com.housekeeper.ar.healthhousekeeper.followup.view.MyLineView
+        android:id="@+id/xchart_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <com.housekeeper.ar.healthhousekeeper.followup.view.RadarView
+        android:id="@+id/radar_view"
+        android:layout_height="300dp"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bottom_btn_selector"
+    android:gravity="center"
+            android:orientation="vertical"
+
+    android:paddingTop="@dimen/padding_mid_size"
+    android:paddingBottom="@dimen/padding_min_size"
+    android:id="@+id/tab_layout"
+    >
+    <!--  
+     <ImageView
+                android:id="@+id/btn_tab"
+                android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:scaleType="fitCenter" />
+
+
+    <TextView
+        android:id="@+id/tv_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tab1"
+        android:textColor="@color/white" />-->
+    
+    <ImageView
+                android:id="@+id/btn_tab"
+                android:layout_width="@dimen/button_height"
+                 android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:layout_marginLeft="@dimen/bottom_tab_indicator"
+                android:layout_marginRight="@dimen/bottom_tab_indicator"
+                android:scaleType="centerInside"
+                 />
+
+            <TextView
+                android:id="@+id/tv_tab"
+                android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bottom_txt_size" />
+
+</LinearLayout>

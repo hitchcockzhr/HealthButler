@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_corner_shape">
+            <com.housekeeper.ar.healthhousekeeper.RoundImageView
+                android:id="@+id/header_image"
+                android:layout_width="@dimen/simple_height6"
+                android:layout_height="@dimen/simple_height6"
+                android:src="@drawable/header_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/header_image"
+                android:text="类型"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/header_image"
+                android:text="张良"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_below="@+id/type_tv"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/name_tv"
+                android:layout_alignBottom="@+id/name_tv"
+                android:text="男"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/age_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/sex_tv"
+                android:layout_alignBottom="@+id/name_tv"
+                android:text="53"
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/tel_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/header_image"
+                android:layout_below="@+id/name_tv"
+                android:text="手机："
+                android:textSize="@dimen/txt_min_size"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tel_tv1"
+                android:layout_alignBottom="@+id/tel_tv1"
+                android:text="13821435642"
+                android:textSize="@dimen/txt_min_size"
+                />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"
+        android:layout_marginTop="5dp"/>
+
+
+</LinearLayout>

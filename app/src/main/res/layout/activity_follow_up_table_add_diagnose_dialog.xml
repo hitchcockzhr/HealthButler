@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/schedule_set_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="添加至诊断"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height3"
+        android:textSize="@dimen/txt_min_size"
+        android:text="确定将该病添加到诊断中吗？"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="40dp"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height3"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+        >
+
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_white_stroke_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/simple_height4"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_white_stroke_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+
+
+    </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

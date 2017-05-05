@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:minHeight="@dimen/simple_height4">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:text="白金会员"
+        android:layout_width="@dimen/simple_height9"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/rules_layout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right|center_vertical">
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="编辑"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="办卡"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height3"
+            android:text="删除"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

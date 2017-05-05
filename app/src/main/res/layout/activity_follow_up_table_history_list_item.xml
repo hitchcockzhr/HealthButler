@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/simple_height5"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+
+
+
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="随访时间"
+            android:gravity="center"
+            android:textSize="@dimen/txt_mid_size"/>
+        <TextView
+            android:id="@+id/template_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="随访模板"
+            android:gravity="center"
+            android:textSize="@dimen/txt_mid_size"/>
+    <LinearLayout
+        android:layout_width="@dimen/simple_height8"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/detail_btn"
+            android:layout_width="@dimen/simple_height5"
+            android:layout_height="@dimen/simple_height3"
+            android:text="详情"
+            android:textSize="@dimen/txt_mid_size"
+            android:textColor="@color/white"
+            android:background="@drawable/simple_btn_selector"/>
+    </LinearLayout>
+
+
+</LinearLayout>

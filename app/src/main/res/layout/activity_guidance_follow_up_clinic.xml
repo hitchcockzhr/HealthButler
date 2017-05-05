@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp">
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_bottom_edittextfield"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:hint="姓名/手机号"
+            />
+        <ImageView
+            android:id="@+id/deatail_image_view"
+            android:layout_width="@dimen/search_size"
+            android:layout_height="@dimen/search_size"
+            android:src="@drawable/search"
+            android:scaleType="centerInside"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+    <!-- 个人信息 -->
+
+
+    <ListView
+        android:id="@+id/follow_up_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+</LinearLayout>

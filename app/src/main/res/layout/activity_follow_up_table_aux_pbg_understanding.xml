@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green"
+        >
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/left_arrow"
+            android:gravity="center"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/window_top_size"
+            android:background="@color/background_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+            android:text="餐后血糖检查解读"
+            android:layout_marginRight="40dp"
+
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="介绍"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        餐后2小时血糖正常值是指从吃第一口饭开始计时，整整2个小时后测血糖。测量时应按与平时一样的时间和剂量服药、注射胰岛素和吃饭。餐后2小时后血糖受所进食物的种类、胃肠蠕动快慢、饭后运动量和餐前血糖水平等多种因素影响值。正常情况下，餐后血糖正常值在7.8毫摩尔每升以下"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        测餐后2小时血糖可发现可能存在的餐后高血糖。很多2型糖尿病患者空腹时测血糖不高，而餐后测血糖就很高，如果只检查空腹血糖，往往会使部分患者漏诊。同时餐后2小时测出来的血糖值能较好地反映进食及使用降糖药是否合适，这是空腹血糖不能够反映的。除此以外，餐后2小时血糖值的检测不会影响正常服药或打针，也会不影响正常进食，所以不会引起血糖特别大地波动。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="解读"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:id="@+id/understanding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/window_top_size"
+            android:text="餐后血糖"
+            android:textSize="@dimen/txt_mid_size"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        餐后血糖正常值的判断，没有一个时间界限，但是，临床医学，一般都拿餐后两小时血糖含量作为标准，因为这个时候是最具有代表意义的，而且，更加准确。"
+            android:textSize="@dimen/txt_mid_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gray_corner_shape"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="餐后血糖正常值在7.8毫摩尔每升以下，如果餐后两小时的血糖含量在这个范围的话，那么基本上可以认为是血糖含量比较正常的，而且是比较理想的状态。餐后血糖正常值指的就是这个范围。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="餐后血糖值在7.8毫摩尔和11.1毫摩尔每升之间，如果餐后血糖含量在这个范围的话，被称为糖耐量异常，或者是血糖偏高，这个时候就要多加注意了，因为这是糖尿病的先兆，不能忽视这个症状。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/deep_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="餐后血糖值在11.1毫摩尔每升以上，毫无疑问，假如餐后血糖含量在11.1毫摩尔以上的话，那么，就一定是糖尿病患者了。如果要判断是否糖尿病，那么，这个数值就是判断糖尿病的最佳范围了。"
+                android:textSize="@dimen/txt_mid_size"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/window_top_size"
+        android:text="注意事项"
+        android:textSize="@dimen/txt_max_size"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.餐后血糖正常值是衡量身体健康的重要标准，了解这些对于关注身体健康非常重要，餐后血糖正常值只有在健康标准值之内，才能确定身体的健康状况。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.餐后血糖正常值对于人体健康来说有着重要的意义，由于不同的人体质不同，其具体的血糖值也有差异，因此餐后血糖正常值仅仅是一个范围，而不是准确的数值。餐后血糖的正常与否，关系到患者的健康与治疗，因此餐后血糖正常值要特别引起重视。"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

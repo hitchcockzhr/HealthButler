@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/simple_gray_stroke"
+    android:padding="5dp"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height6"
+        android:gravity="center_vertical"
+        >
+        <com.housekeeper.ar.healthhousekeeper.RoundImageView
+            android:id="@+id/head_imageview"
+            android:layout_width="@dimen/simple_height6"
+            android:layout_height="@dimen/simple_height6"
+            android:src="@drawable/header_photo"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:id="@+id/name_tv"
+            android:text="姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/head_imageview"/>
+
+        <TextView
+            android:id="@+id/hospital_tv"
+            android:text="1号社区医院"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_toRightOf="@+id/name_tv"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/keshi_tv"
+            android:text="科室"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_toRightOf="@+id/hospital_tv"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/zhicheng_tv"
+            android:text="职称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_min_size"
+            android:layout_below="@+id/name_tv"
+            android:layout_alignLeft="@+id/name_tv"/>
+        <Button
+            android:id="@+id/button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height35"
+            android:layout_toRightOf="@+id/zhicheng_tv"
+            android:background="@drawable/simple_btn_selector"
+            android:textSize="@dimen/txt_min_size"
+            android:text="展开"
+            android:textColor="@color/white"
+            android:layout_below="@+id/keshi_tv"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.housekeeper.ar.healthhousekeeper.appointmentlist.ChildListView
+        android:id="@+id/patient_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@color/white"
+        android:layout_margin="10dp" />
+
+
+
+
+</LinearLayout>

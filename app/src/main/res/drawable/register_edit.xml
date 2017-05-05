@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--线条-->
+    <item>
+        <shape>
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+    <!--填充，只有下部有线条 -->
+    <item android:bottom="1dp">
+        <shape>
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+</layer-list>

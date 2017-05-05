@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_top_size"
+        android:orientation="horizontal"
+        android:background="@color/background_green">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/left_arrow"
+            android:textSize="@dimen/arrow_txt_size"
+            android:textColor="@color/white"
+            android:background="@color/background_green"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/window_top_size"
+            android:layout_weight="1"
+            android:text="办卡"
+            android:textSize="@dimen/txt_max_size"
+            android:gravity="center"
+
+            android:layout_marginRight="40dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:minHeight="@dimen/simple_height4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:text="白金会员"
+            android:layout_width="@dimen/simple_height9"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/rules_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/simple_height3">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/txt_mid_size"
+        android:text="充值额："/>
+    <EditText
+        android:id="@+id/money_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:layout_marginLeft="@dimen/simple_height3"
+        android:layout_marginRight="@dimen/simple_height3"
+
+        android:ems="10"
+        android:hint="充值额"
+        android:textSize="@dimen/txt_mid_size"
+        android:background="@drawable/simple_gray_stroke"
+        android:inputType="numberDecimal"
+        android:paddingLeft="5dp"
+        android:singleLine="true"/>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:minHeight="@dimen/simple_height4"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:text="享有优惠："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/favoured_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/simple_height3"
+        >
+        <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="@dimen/simple_height8"
+        android:layout_height="@dimen/simple_height35"
+        android:background="@drawable/simple_btn_selector"
+        android:textColor="@color/white"
+        android:text="确认付款"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:textSize="@dimen/txt_mid_size"/>
+
+        <Button
+            android:id="@+id/later_pay_btn"
+            android:layout_width="@dimen/simple_height8"
+            android:layout_height="@dimen/simple_height35"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:text="稍后付款"
+            android:layout_marginLeft="@dimen/simple_height3"
+            android:layout_marginRight="@dimen/simple_height3"
+            android:textSize="@dimen/txt_mid_size"/>
+        
+    </LinearLayout>
+
+    
+
+</LinearLayout>

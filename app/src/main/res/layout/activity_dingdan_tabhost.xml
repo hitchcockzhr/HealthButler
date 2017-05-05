@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+
+
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/simple_height4"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/left_arrow"
+                android:clickable="true"
+                android:textSize="30sp"
+                android:textColor="@color/background_green"
+                android:layout_marginRight="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/simple_height4"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/deep_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:padding="5dp" />
+
+
+<!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_height"
+            android:background="@color/background_green"
+            android:orientation="horizontal"
+
+            >
+            <LinearLayout
+                android:id="@+id/quyao_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/quyao_image_view"
+                    android:layout_width="@dimen/bottom_item_height"
+                    android:layout_height="@dimen/bottom_item_height"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/queue"
+                    android:scaleType="centerInside"/>
+                <TextView
+                    android:id="@+id/quyao_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="取药"
+                    android:textSize="@dimen/txt_min_size"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saoma_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/saoma_image_view"
+                    android:layout_width="@dimen/bottom_item_height"
+                    android:layout_height="@dimen/bottom_item_height"
+                    android:src="@drawable/menu_scan_code"
+                    android:scaleType="centerInside"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="扫码"
+                    android:textSize="@dimen/txt_min_size"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tuiyao_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/tuiyao_image_view"
+                    android:layout_width="@dimen/bottom_item_height"
+                    android:layout_height="@dimen/bottom_item_height"
+                    android:src="@drawable/menu_tuikuan"
+                    android:scaleType="centerInside"/>
+                <TextView
+                    android:id="@+id/tuiyao_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="退药"
+                    android:textSize="@dimen/txt_min_size"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        -->
+    </LinearLayout>
+
+</TabHost>

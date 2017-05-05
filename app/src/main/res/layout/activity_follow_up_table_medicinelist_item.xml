@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/simple_height4"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="5dp"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <TextView
+        android:id="@+id/medicine_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="药品名称"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:background="@drawable/simple_gray_stroke"/>
+    <LinearLayout
+        android:id="@+id/medicine_yongliang"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/medicine_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/medicine_cishu"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:text="次数"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:inputType="number"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:selectAllOnFocus="true"
+        android:digits="123"
+        android:layout_marginRight="5dp"
+        android:focusable="true"/>
+    <EditText
+        android:id="@+id/medicine_tianshu"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:text="天数"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:inputType="number"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:selectAllOnFocus="true"
+        android:layout_marginRight="5dp"/>
+    <EditText
+        android:id="@+id/medicine_shuliang"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:text="数量"
+        android:textSize="@dimen/txt_mid_size"
+        android:gravity="center"
+        android:inputType="number"
+        android:singleLine="true"
+        android:background="@drawable/simple_gray_stroke"
+        android:selectAllOnFocus="true" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/simple_height3"
+            android:gravity="center"
+            android:text="删除"
+            android:background="@drawable/btn_red_selector"
+            android:textSize="@dimen/txt_mid_size"
+            android:layout_margin="3dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/schedule_set_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:id="@+id/schedule_dialog" >
+
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height4"
+        android:gravity="center_vertical"
+        android:text="新增诊断"
+
+        android:background="@color/background_green"
+        android:textSize="@dimen/txt_mid_size"
+        android:textColor="@color/white"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+
+    <GridView
+        android:id="@+id/select_diseases_gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:numColumns="2"
+        android:columnWidth="90dp"
+        android:stretchMode="columnWidth"
+
+        android:listSelector="@android:color/transparent"
+        android:background="@drawable/schedule_set_time_text_shape"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+
+
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/schedule_set_time_text_shape"
+            android:layout_margin="10dp">
+
+
+            <com.housekeeper.ar.healthhousekeeper.FlowLayout
+                android:id="@+id/selcected_current_diagnosis_flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                app:horizontalSpacing="10dp"
+                app:verticalSpacing="10dp"
+                app:orientation="horizontal"
+                app:childGravity="center"
+                >
+            </com.housekeeper.ar.healthhousekeeper.FlowLayout>
+
+
+        </ScrollView>
+
+    <GridView
+        android:id="@+id/diseases_gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:numColumns="2"
+        android:columnWidth="90dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:background="@drawable/schedule_set_time_text_shape"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_height3"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/add_diagnosis_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:textSize="@dimen/txt_min_size"
+            android:background="@drawable/schedule_set_time_text_shape"
+            android:paddingLeft="2dp">
+
+            <requestFocus />
+        </EditText>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="搜索"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_white_stroke_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_white_stroke_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/simple_height4"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/txt_min_size"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_white_stroke_selector"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_min_size"
+                android:layout_marginRight="@dimen/padding_min_size"/>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

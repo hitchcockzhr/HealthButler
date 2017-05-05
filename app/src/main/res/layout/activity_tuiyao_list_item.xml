@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/simple_height4"
+    android:orientation="horizontal"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp">
+    <TextView
+        android:id="@+id/id_tv"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="@dimen/simple_height4"
+        android:text="序号"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/txt_min_size"/>
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="@dimen/simple_height4"
+        android:text="商品名称"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/txt_min_size"/>
+    <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/simple_height4"
+        android:text="数量"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/txt_min_size"/>
+    <TextView
+        android:id="@+id/danjia_tv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/simple_height4"
+        android:text="单价"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/txt_min_size"/>
+
+
+
+
+</LinearLayout>

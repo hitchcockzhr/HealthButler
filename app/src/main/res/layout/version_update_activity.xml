@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/background_green"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/title_top_height">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咻医生"
+                android:textColor="@color/white"
+                android:textSize="@dimen/arrow_txt_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咻一下，就医就这么简单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_mid_size"
+                android:layout_marginLeft="30dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/now_version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_top_height"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前版本："
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_min_size"/>
+            <TextView
+                android:id="@+id/now_version_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="6.2.1"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_min_size"/>
+            <TextView
+                android:id="@+id/now_version_right_arrow"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="@string/right_arrow"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_max_size"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/new_version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_top_height"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="更新版本："
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/new_version_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="6.2.2"
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="("
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:id="@+id/new_version_size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="87M"
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=")"
+
+
+                android:textSize="@dimen/txt_mid_size"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_gray"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:orientation="vertical">
+       <ListView
+           android:id="@+id/new_version_list_view"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:divider="@null"
+           android:listSelector="@color/white"
+           android:layout_margin="20dp"/>
+
+
+
+
+       <Button
+           android:id="@+id/update_btn"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:text="下载并安装"
+           android:layout_gravity="center"
+           android:layout_margin="20dp"
+           android:textColor="@color/white"
+           android:textSize="@dimen/txt_mid_size"
+           android:background="@drawable/simple_btn_selector"/>
+   </LinearLayout>
+
+
+
+</LinearLayout>

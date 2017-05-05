@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+        <TextView
+            android:id="@+id/history_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:gravity="center"
+            android:focusable="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_min_size"
+            android:text="历史图表"
+            android:background="@drawable/simple_btn_selector"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"/>
+        <TextView
+            android:id="@+id/contact_doctor_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/simple_height4"
+            android:gravity="center"
+            android:focusable="true"
+            android:background="@drawable/simple_btn_selector"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_min_size"
+            android:text="联系医生"/>
+
+</LinearLayout>

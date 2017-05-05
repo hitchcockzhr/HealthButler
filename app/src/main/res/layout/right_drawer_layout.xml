@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/right_drawer_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Test Right Drawer"
+        android:textSize="@dimen/txt_max_size" />
+
+    <ListView
+        android:id="@+id/right_drawer_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/txt_max_size"
+        android:divider="@null">
+    </ListView>
+
+</LinearLayout>
